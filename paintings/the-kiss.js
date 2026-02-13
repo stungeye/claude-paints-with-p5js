@@ -41,9 +41,14 @@ paintings.push({
         160 + random(60),
         135 + random(50),
         50 + random(40),
-        random(20, 60)
+        random(20, 60),
       );
-      pg.ellipse(random(w), random(h), random(w * 0.005, w * 0.02), random(h * 0.003, h * 0.01));
+      pg.ellipse(
+        random(w),
+        random(h),
+        random(w * 0.005, w * 0.02),
+        random(h * 0.003, h * 0.01),
+      );
     }
 
     // Swirling gold pattern in background
@@ -112,17 +117,73 @@ paintings.push({
     pg.beginShape();
     // Top of man's head
     pg.vertex(cx - w * 0.02, cy - h * 0.25);
-    pg.bezierVertex(cx - w * 0.08, cy - h * 0.25, cx - w * 0.13, cy - h * 0.2, cx - w * 0.15, cy - h * 0.1);
+    pg.bezierVertex(
+      cx - w * 0.08,
+      cy - h * 0.25,
+      cx - w * 0.13,
+      cy - h * 0.2,
+      cx - w * 0.15,
+      cy - h * 0.1,
+    );
     // Left side
-    pg.bezierVertex(cx - w * 0.17, cy, cx - w * 0.18, cy + h * 0.1, cx - w * 0.17, cy + h * 0.2);
-    pg.bezierVertex(cx - w * 0.16, cy + h * 0.3, cx - w * 0.12, cy + h * 0.35, cx - w * 0.08, cy + h * 0.38);
+    pg.bezierVertex(
+      cx - w * 0.17,
+      cy,
+      cx - w * 0.18,
+      cy + h * 0.1,
+      cx - w * 0.17,
+      cy + h * 0.2,
+    );
+    pg.bezierVertex(
+      cx - w * 0.16,
+      cy + h * 0.3,
+      cx - w * 0.12,
+      cy + h * 0.35,
+      cx - w * 0.08,
+      cy + h * 0.38,
+    );
     // Bottom (woman kneeling)
-    pg.bezierVertex(cx - w * 0.04, cy + h * 0.4, cx + w * 0.04, cy + h * 0.42, cx + w * 0.1, cy + h * 0.4);
-    pg.bezierVertex(cx + w * 0.15, cy + h * 0.38, cx + w * 0.18, cy + h * 0.32, cx + w * 0.18, cy + h * 0.22);
+    pg.bezierVertex(
+      cx - w * 0.04,
+      cy + h * 0.4,
+      cx + w * 0.04,
+      cy + h * 0.42,
+      cx + w * 0.1,
+      cy + h * 0.4,
+    );
+    pg.bezierVertex(
+      cx + w * 0.15,
+      cy + h * 0.38,
+      cx + w * 0.18,
+      cy + h * 0.32,
+      cx + w * 0.18,
+      cy + h * 0.22,
+    );
     // Right side
-    pg.bezierVertex(cx + w * 0.17, cy + h * 0.12, cx + w * 0.15, cy, cx + w * 0.12, cy - h * 0.08);
-    pg.bezierVertex(cx + w * 0.1, cy - h * 0.15, cx + w * 0.06, cy - h * 0.2, cx + w * 0.02, cy - h * 0.22);
-    pg.bezierVertex(cx, cy - h * 0.24, cx - w * 0.01, cy - h * 0.25, cx - w * 0.02, cy - h * 0.25);
+    pg.bezierVertex(
+      cx + w * 0.17,
+      cy + h * 0.12,
+      cx + w * 0.15,
+      cy,
+      cx + w * 0.12,
+      cy - h * 0.08,
+    );
+    pg.bezierVertex(
+      cx + w * 0.1,
+      cy - h * 0.15,
+      cx + w * 0.06,
+      cy - h * 0.2,
+      cx + w * 0.02,
+      cy - h * 0.22,
+    );
+    pg.bezierVertex(
+      cx,
+      cy - h * 0.24,
+      cx - w * 0.01,
+      cy - h * 0.25,
+      cx - w * 0.02,
+      cy - h * 0.25,
+    );
     pg.endShape(CLOSE);
 
     // Man's head/face (leaning down to kiss)
@@ -137,7 +198,8 @@ paintings.push({
       pg.ellipse(
         cx - w * 0.04 + cos(ia) * w * 0.04,
         cy - h * 0.2 + sin(ia) * h * 0.03,
-        w * 0.015, h * 0.012
+        w * 0.015,
+        h * 0.012,
       );
     }
 
@@ -149,9 +211,30 @@ paintings.push({
     pg.fill(140, 80, 40);
     pg.beginShape();
     pg.vertex(cx + w * 0.04, cy - h * 0.15);
-    pg.bezierVertex(cx + w * 0.08, cy - h * 0.12, cx + w * 0.1, cy - h * 0.05, cx + w * 0.08, cy + h * 0.05);
-    pg.bezierVertex(cx + w * 0.06, cy + h * 0.08, cx + w * 0.04, cy + h * 0.05, cx + w * 0.03, cy);
-    pg.bezierVertex(cx + w * 0.04, cy - h * 0.05, cx + w * 0.05, cy - h * 0.1, cx + w * 0.04, cy - h * 0.15);
+    pg.bezierVertex(
+      cx + w * 0.08,
+      cy - h * 0.12,
+      cx + w * 0.1,
+      cy - h * 0.05,
+      cx + w * 0.08,
+      cy + h * 0.05,
+    );
+    pg.bezierVertex(
+      cx + w * 0.06,
+      cy + h * 0.08,
+      cx + w * 0.04,
+      cy + h * 0.05,
+      cx + w * 0.03,
+      cy,
+    );
+    pg.bezierVertex(
+      cx + w * 0.04,
+      cy - h * 0.05,
+      cx + w * 0.05,
+      cy - h * 0.1,
+      cx + w * 0.04,
+      cy - h * 0.15,
+    );
     pg.endShape(CLOSE);
 
     // Decorative flowers in hair
@@ -173,9 +256,23 @@ paintings.push({
     pg.fill(220, 190, 155);
     pg.beginShape();
     pg.vertex(cx + w * 0.05, cy - h * 0.06);
-    pg.bezierVertex(cx + w * 0.08, cy - h * 0.04, cx + w * 0.1, cy, cx + w * 0.08, cy + h * 0.05);
+    pg.bezierVertex(
+      cx + w * 0.08,
+      cy - h * 0.04,
+      cx + w * 0.1,
+      cy,
+      cx + w * 0.08,
+      cy + h * 0.05,
+    );
     pg.vertex(cx + w * 0.06, cy + h * 0.04);
-    pg.bezierVertex(cx + w * 0.07, cy, cx + w * 0.06, cy - h * 0.03, cx + w * 0.05, cy - h * 0.06);
+    pg.bezierVertex(
+      cx + w * 0.07,
+      cy,
+      cx + w * 0.06,
+      cy - h * 0.03,
+      cx + w * 0.05,
+      cy - h * 0.06,
+    );
     pg.endShape(CLOSE);
 
     // Woman's feet visible at bottom
@@ -235,7 +332,7 @@ paintings.push({
         cx + random(-w * 0.2, w * 0.2),
         cy + random(-h * 0.25, h * 0.4),
         random(w * 0.005, w * 0.02),
-        random(h * 0.005, h * 0.015)
+        random(h * 0.005, h * 0.015),
       );
     }
 

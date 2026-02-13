@@ -6,66 +6,45 @@ An interactive gallery of 18 famous paintings recreated entirely in code using [
 
 ## Controls
 
-| Key | Action |
-|---|---|
-| `→` / `←` | Navigate between paintings |
-| `S` | Save current painting as PNG |
+| Key       | Action                       |
+| --------- | ---------------------------- |
+| `→` / `←` | Navigate between paintings   |
+| `S`       | Save current painting as PNG |
 
 ## The Paintings
 
-| # | Painting | Artist | Year |
-|---|---|---|---|
-| 1 | Mona Lisa | Leonardo da Vinci | c. 1503–1519 |
-| 2 | The Birth of Venus | Sandro Botticelli | c. 1485 |
-| 3 | The Sleeping Gypsy | Henri Rousseau | 1897 |
-| 4 | No. 5, 1948 | Jackson Pollock | 1948 |
-| 5 | The Kiss | Gustav Klimt | 1907–1908 |
-| 6 | Three Musicians | Pablo Picasso | 1921 |
-| 7 | The Starry Night | Vincent van Gogh | 1889 |
-| 8 | The Dance | Henri Matisse | 1910 |
-| 9 | The Arnolfini Marriage | Jan van Eyck | 1434 |
-| 10 | Olympia | Édouard Manet | 1863 |
-| 11 | The Scream | Edvard Munch | 1893 |
-| 12 | Composition VIII | Wassily Kandinsky | 1923 |
-| 13 | Royal Red and Blue | Mark Rothko | 1960 |
-| 14 | The Son of Man | René Magritte | 1964 |
-| 15 | American Gothic | Grant Wood | 1930 |
-| 16 | The Flower Carrier | Diego Rivera | 1935 |
-| 17 | Girl with a Pearl Earring | Johannes Vermeer | c. 1665 |
-| 18 | The Last Supper | Leonardo da Vinci | c. 1495–1498 |
+| #   | Painting                  | Artist            | Year         |
+| --- | ------------------------- | ----------------- | ------------ |
+| 1   | Mona Lisa                 | Leonardo da Vinci | c. 1503–1519 |
+| 2   | The Birth of Venus        | Sandro Botticelli | c. 1485      |
+| 3   | The Sleeping Gypsy        | Henri Rousseau    | 1897         |
+| 4   | No. 5, 1948               | Jackson Pollock   | 1948         |
+| 5   | The Kiss                  | Gustav Klimt      | 1907–1908    |
+| 6   | Three Musicians           | Pablo Picasso     | 1921         |
+| 7   | The Starry Night          | Vincent van Gogh  | 1889         |
+| 8   | The Dance                 | Henri Matisse     | 1910         |
+| 9   | The Arnolfini Marriage    | Jan van Eyck      | 1434         |
+| 10  | Olympia                   | Édouard Manet     | 1863         |
+| 11  | The Scream                | Edvard Munch      | 1893         |
+| 12  | Composition VIII          | Wassily Kandinsky | 1923         |
+| 13  | Royal Red and Blue        | Mark Rothko       | 1960         |
+| 14  | The Son of Man            | René Magritte     | 1964         |
+| 15  | American Gothic           | Grant Wood        | 1930         |
+| 16  | The Flower Carrier        | Diego Rivera      | 1935         |
+| 17  | Girl with a Pearl Earring | Johannes Vermeer  | c. 1665      |
+| 18  | The Last Supper           | Leonardo da Vinci | c. 1495–1498 |
 
 ## The Original Prompt
 
-This project was generated through a conversation with an AI coding assistant (Claude, via GitHub Copilot in VS Code). The prompt that started it:
-
-> I want you to create a sketch where I can navigate between the following p5.js recreations of the famous paintings listed below.
+> This project was generated through a conversation with an AI coding assistant (Claude, via GitHub Copilot in VS Code). The prompt that started it:
 >
-> Each painting should be in its own `.js` file in a `paintings/` folder. Each `.js` file should begin with a comment describing the painting and the approach being taken to representing it in code.
+> I've got p5.js set up in this project. I want you to create a sketch where I can navigate between the following p5.js recreations of the famous paintings listed below.
 >
-> Prioritize recognizability and capturing the essence of each work (key colors, composition, distinctive elements) over pixel-perfect reproduction. Preserve canvas aspect ratio from the original work where known.
+> Each painting should be created in a separate .js file. At the top of the file in a comment you will describe the painting, along with your approach to recreating it using the constrained medium of p5.js 2d drawing techniques. Do you best to generate an accurate recreation of each painting. Prioritize recognizability and capturing the essence of each work (key colors, composition, distinctive elements) over pixel-perfect reproduction. Preserve canvas aspect ratio from the original work where known.
 >
-> Use left/right arrow keys to navigate between paintings. Pressing 'S' should export the current painting with the listed filename.
+> I'd also like to be able to export each painting to a saved file. The filenames (without extension) should be:
 >
-> The paintings:
->
-> 1. Mona Lisa
-> 2. The Birth of Venus
-> 3. The Sleeping Gypsy
-> 4. No. 5, 1948
-> 5. The Kiss
-> 6. Three Musicians
-> 7. The Starry Night
-> 8. The Dance
-> 9. The Arnolfini Marriage
-> 10. Olympia
-> 11. The Scream
-> 12. Composition VIII
-> 13. Royal Red and Blue
-> 14. The Son of Man
-> 15. American Gothic
-> 16. The Flower Carrier
-> 17. Girl with a Pearl Earring
-> 18. The Last Supper
+> <list of paintings went here>
 
 ## Process: How the Paintings Were Built
 
@@ -101,7 +80,7 @@ A few specific challenges are worth calling out:
 
 - **The Kiss** by Klimt: The ornamental gold patterns that define this painting were generated with seeded random loops placing small rectangles, circles, and triangles across the figures' robes — essentially a computational version of Klimt's own obsessive decorative process.
 
-- **No. 5, 1948** by Pollock: Perhaps the most natural fit for procedural code. The painting *is* a process — layers of poured paint — and the code recreates that process literally: five sequential passes of random line segments in different colors, followed by a splatter pass.
+- **No. 5, 1948** by Pollock: Perhaps the most natural fit for procedural code. The painting _is_ a process — layers of poured paint — and the code recreates that process literally: five sequential passes of random line segments in different colors, followed by a splatter pass.
 
 ### What Doesn't Translate
 
@@ -113,13 +92,13 @@ Color is another gap. Real paintings exist in a much wider and more nuanced colo
 
 Working with p5.js to recreate famous paintings is an exercise in creative constraint — and that constraint turns out to be genuinely interesting rather than merely limiting.
 
-p5.js is, at its core, a drawing API. You have a canvas and a set of geometric primitives: points, lines, rectangles, ellipses, arcs, bezier curves. There are no brushes, no palette knives, no turpentine. You don't *paint* — you *describe geometry*. This forces a fundamentally different relationship with the image. Where a painter might intuitively swipe a loaded brush to create a highlight on a cheekbone, the coder must decompose that highlight into a position, a size, an opacity, and a color, then express it as `pg.fill(235, 210, 180, 60); pg.ellipse(faceX, faceY, w * 0.04, h * 0.06)`. It is painting by analysis rather than painting by feel.
+p5.js is, at its core, a drawing API. You have a canvas and a set of geometric primitives: points, lines, rectangles, ellipses, arcs, bezier curves. There are no brushes, no palette knives, no turpentine. You don't _paint_ — you _describe geometry_. This forces a fundamentally different relationship with the image. Where a painter might intuitively swipe a loaded brush to create a highlight on a cheekbone, the coder must decompose that highlight into a position, a size, an opacity, and a color, then express it as `pg.fill(235, 210, 180, 60); pg.ellipse(faceX, faceY, w * 0.04, h * 0.06)`. It is painting by analysis rather than painting by feel.
 
-This analytical decomposition is, in a way, a form of very close looking. To recreate a painting in code, you must truly *see* it — understand its structure, its palette, its spatial logic. You have to decide: what are the essential visual elements that make this painting *this painting*? What can be simplified, and what must be preserved? The pitchfork in American Gothic. The pearl in Vermeer. The green apple in Magritte. The swirling sky in Van Gogh. Stripping a masterwork down to its most recognizable geometric essence is its own form of art criticism.
+This analytical decomposition is, in a way, a form of very close looking. To recreate a painting in code, you must truly _see_ it — understand its structure, its palette, its spatial logic. You have to decide: what are the essential visual elements that make this painting _this painting_? What can be simplified, and what must be preserved? The pitchfork in American Gothic. The pearl in Vermeer. The green apple in Magritte. The swirling sky in Van Gogh. Stripping a masterwork down to its most recognizable geometric essence is its own form of art criticism.
 
 There is also something poetic about the medium's limitations. Every painting in this gallery is built entirely from mathematics — coordinates, colors, and curves defined by equations. There is no image data, no photograph, no scan. The Mona Lisa is ~660 lines of function calls. This feels appropriate for an homage: not a copy, but a reconstruction from first principles, the way a musician might transcribe an orchestral work for solo piano. The transcription is not the original, and doesn't pretend to be. But the act of transcription reveals structure.
 
-p5.js also brings its own aesthetic. The perfectly smooth gradients, the clean geometric edges, the slightly synthetic quality of computed color — these give the recreations a distinctive look that sits somewhere between the original paintings and vector illustration. It's an honest medium: it doesn't try to fake brushstrokes or simulate canvas texture. The code *is* the technique, visible in every file for anyone to read.
+p5.js also brings its own aesthetic. The perfectly smooth gradients, the clean geometric edges, the slightly synthetic quality of computed color — these give the recreations a distinctive look that sits somewhere between the original paintings and vector illustration. It's an honest medium: it doesn't try to fake brushstrokes or simulate canvas texture. The code _is_ the technique, visible in every file for anyone to read.
 
 Where p5.js truly excels in this context is with paintings that are already geometric or procedural in nature. Pollock's drip paintings, Kandinsky's compositions, Mondrian-like works, Matisse's bold flat shapes — these map almost natively to code. The further a painting is from photorealism and the closer it is to graphic design, the better p5.js can honor it. The Cubist flattening of Three Musicians, which breaks subjects into colored planes, is essentially what `rect()` and `triangle()` already do.
 
@@ -145,8 +124,10 @@ This is a static site — no build step, no server, no dependencies beyond the p
 npx serve .
 ```
 
-## License
+## unlicense
 
-The p5.js library files in `libraries/` are licensed under the [LGPL-2.1](https://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html).
+This project is released under the [Unlicense](UNLICENSE) into the public domain for anyone to use, modify, distribute, or build upon for any purpose, without restriction or attribution.
 
-The painting recreations are original code interpretations. The original artworks referenced are in the public domain or are referenced here under fair use for the purpose of artistic commentary and education.
+The paintings recreated here were made by humans who are now dead. The code recreating them was generated by an AI that was never alive.
+
+The p5.js library files in `libraries/` are licensed separately under the [LGPL-2.1](https://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html) by the p5.js project.

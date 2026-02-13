@@ -48,7 +48,7 @@ paintings.push({
     pg.stroke(140, 125, 100);
     pg.strokeWeight(w * 0.003);
     for (var cb = 0; cb < 8; cb++) {
-      var cx1 = cb * w / 7;
+      var cx1 = (cb * w) / 7;
       pg.line(cx1, 0, lerp(cx1, vpx, 0.4), h * 0.18);
     }
     // Horizontal beams
@@ -104,7 +104,14 @@ paintings.push({
     // Center window (larger, behind Christ)
     pg.fill(150, 185, 210);
     pg.rect(w * 0.43, winY - h * 0.02, winW * 1.4, winH * 1.1);
-    pg.arc(w * 0.43 + winW * 0.7, winY - h * 0.02, winW * 1.4, winW * 0.7, PI, TWO_PI);
+    pg.arc(
+      w * 0.43 + winW * 0.7,
+      winY - h * 0.02,
+      winW * 1.4,
+      winW * 0.7,
+      PI,
+      TWO_PI,
+    );
 
     // Right window
     pg.fill(140, 175, 200);
@@ -212,7 +219,11 @@ paintings.push({
       pg.ellipse(x, y - h * 0.08, w * 0.028, h * 0.05);
 
       // Hair
-      pg.fill(red(headColor) * 0.5, green(headColor) * 0.5, blue(headColor) * 0.5);
+      pg.fill(
+        red(headColor) * 0.5,
+        green(headColor) * 0.5,
+        blue(headColor) * 0.5,
+      );
       pg.arc(x, y - h * 0.09, w * 0.028, h * 0.03, PI, TWO_PI);
 
       // Gesture arms
@@ -232,14 +243,50 @@ paintings.push({
     }
 
     // Group 1 (far left): Bartholomew, James Minor, Andrew
-    drawFigure(w * 0.13, h * 0.52, color(80, 70, 55), color(200, 175, 150), "reaching");
-    drawFigure(w * 0.17, h * 0.5, color(60, 80, 55), color(210, 185, 155), "praying");
-    drawFigure(w * 0.21, h * 0.51, color(110, 75, 50), color(205, 180, 150), "spread");
+    drawFigure(
+      w * 0.13,
+      h * 0.52,
+      color(80, 70, 55),
+      color(200, 175, 150),
+      "reaching",
+    );
+    drawFigure(
+      w * 0.17,
+      h * 0.5,
+      color(60, 80, 55),
+      color(210, 185, 155),
+      "praying",
+    );
+    drawFigure(
+      w * 0.21,
+      h * 0.51,
+      color(110, 75, 50),
+      color(205, 180, 150),
+      "spread",
+    );
 
     // Group 2 (center-left): Judas, Peter, John
-    drawFigure(w * 0.3, h * 0.53, color(70, 60, 45), color(180, 155, 125), "reaching"); // Judas (darker, leaning back)
-    drawFigure(w * 0.34, h * 0.5, color(90, 80, 100), color(210, 185, 155), "pointing"); // Peter
-    drawFigure(w * 0.38, h * 0.52, color(140, 55, 50), color(215, 190, 160), "praying"); // John
+    drawFigure(
+      w * 0.3,
+      h * 0.53,
+      color(70, 60, 45),
+      color(180, 155, 125),
+      "reaching",
+    ); // Judas (darker, leaning back)
+    drawFigure(
+      w * 0.34,
+      h * 0.5,
+      color(90, 80, 100),
+      color(210, 185, 155),
+      "pointing",
+    ); // Peter
+    drawFigure(
+      w * 0.38,
+      h * 0.52,
+      color(140, 55, 50),
+      color(215, 190, 160),
+      "praying",
+    ); // John
 
     // === CHRIST (center) ===
     // Blue robe
@@ -275,15 +322,43 @@ paintings.push({
     pg.fill(110, 75, 45);
     pg.beginShape();
     pg.vertex(vpx - w * 0.02, h * 0.28);
-    pg.bezierVertex(vpx - w * 0.025, h * 0.32, vpx - w * 0.025, h * 0.36, vpx - w * 0.02, h * 0.38);
+    pg.bezierVertex(
+      vpx - w * 0.025,
+      h * 0.32,
+      vpx - w * 0.025,
+      h * 0.36,
+      vpx - w * 0.02,
+      h * 0.38,
+    );
     pg.vertex(vpx - w * 0.015, h * 0.36);
-    pg.bezierVertex(vpx - w * 0.02, h * 0.33, vpx - w * 0.018, h * 0.3, vpx - w * 0.015, h * 0.28);
+    pg.bezierVertex(
+      vpx - w * 0.02,
+      h * 0.33,
+      vpx - w * 0.018,
+      h * 0.3,
+      vpx - w * 0.015,
+      h * 0.28,
+    );
     pg.endShape(CLOSE);
     pg.beginShape();
     pg.vertex(vpx + w * 0.02, h * 0.28);
-    pg.bezierVertex(vpx + w * 0.025, h * 0.32, vpx + w * 0.025, h * 0.36, vpx + w * 0.02, h * 0.38);
+    pg.bezierVertex(
+      vpx + w * 0.025,
+      h * 0.32,
+      vpx + w * 0.025,
+      h * 0.36,
+      vpx + w * 0.02,
+      h * 0.38,
+    );
     pg.vertex(vpx + w * 0.015, h * 0.36);
-    pg.bezierVertex(vpx + w * 0.018, h * 0.33, vpx + w * 0.018, h * 0.3, vpx + w * 0.015, h * 0.28);
+    pg.bezierVertex(
+      vpx + w * 0.018,
+      h * 0.33,
+      vpx + w * 0.018,
+      h * 0.3,
+      vpx + w * 0.015,
+      h * 0.28,
+    );
     pg.endShape(CLOSE);
 
     // Face
@@ -321,14 +396,50 @@ paintings.push({
     pg.ellipse(vpx, h * 0.35, w * 0.18, h * 0.3);
 
     // Group 3 (center-right): Thomas, James Major, Philip
-    drawFigure(w * 0.62, h * 0.5, color(85, 90, 65), color(210, 185, 155), "recoiling"); // Thomas pointing up
-    drawFigure(w * 0.66, h * 0.51, color(100, 60, 55), color(205, 180, 150), "spread"); // James
-    drawFigure(w * 0.7, h * 0.5, color(70, 90, 70), color(215, 190, 160), "praying"); // Philip
+    drawFigure(
+      w * 0.62,
+      h * 0.5,
+      color(85, 90, 65),
+      color(210, 185, 155),
+      "recoiling",
+    ); // Thomas pointing up
+    drawFigure(
+      w * 0.66,
+      h * 0.51,
+      color(100, 60, 55),
+      color(205, 180, 150),
+      "spread",
+    ); // James
+    drawFigure(
+      w * 0.7,
+      h * 0.5,
+      color(70, 90, 70),
+      color(215, 190, 160),
+      "praying",
+    ); // Philip
 
     // Group 4 (far right): Matthew, Thaddaeus, Simon
-    drawFigure(w * 0.79, h * 0.51, color(75, 65, 90), color(205, 180, 150), "spread");
-    drawFigure(w * 0.83, h * 0.5, color(95, 75, 55), color(210, 185, 155), "reaching");
-    drawFigure(w * 0.87, h * 0.52, color(70, 80, 60), color(200, 175, 145), "recoiling");
+    drawFigure(
+      w * 0.79,
+      h * 0.51,
+      color(75, 65, 90),
+      color(205, 180, 150),
+      "spread",
+    );
+    drawFigure(
+      w * 0.83,
+      h * 0.5,
+      color(95, 75, 55),
+      color(210, 185, 155),
+      "reaching",
+    );
+    drawFigure(
+      w * 0.87,
+      h * 0.52,
+      color(70, 80, 60),
+      color(200, 175, 145),
+      "recoiling",
+    );
 
     // === PERSPECTIVE LINES (subtle) ===
     pg.stroke(155, 138, 110, 40);
@@ -348,9 +459,14 @@ paintings.push({
         155 + random(30),
         138 + random(25),
         110 + random(20),
-        random(5, 20)
+        random(5, 20),
       );
-      pg.ellipse(random(w), random(h), random(w * 0.01, w * 0.05), random(h * 0.01, h * 0.03));
+      pg.ellipse(
+        random(w),
+        random(h),
+        random(w * 0.01, w * 0.05),
+        random(h * 0.01, h * 0.03),
+      );
     }
 
     // Darken bottom (table shadow area)

@@ -104,7 +104,12 @@ paintings.push({
     pg.strokeWeight(w * 0.003);
     for (var r = -5; r <= 5; r++) {
       var angle = (r / 5) * 0.8;
-      pg.line(0, h * 0.02, sin(angle) * w * 0.1, -cos(angle) * h * 0.06 + h * 0.02);
+      pg.line(
+        0,
+        h * 0.02,
+        sin(angle) * w * 0.1,
+        -cos(angle) * h * 0.06 + h * 0.02,
+      );
     }
 
     // Shell edge scallop pattern
@@ -126,9 +131,30 @@ paintings.push({
     // Torso
     pg.beginShape();
     pg.vertex(vx - w * 0.035, vy + h * 0.02);
-    pg.bezierVertex(vx - w * 0.04, vy + h * 0.1, vx - w * 0.045, vy + h * 0.2, vx - w * 0.03, vy + h * 0.3);
-    pg.bezierVertex(vx - w * 0.02, vy + h * 0.32, vx + w * 0.02, vy + h * 0.32, vx + w * 0.03, vy + h * 0.3);
-    pg.bezierVertex(vx + w * 0.045, vy + h * 0.2, vx + w * 0.04, vy + h * 0.1, vx + w * 0.035, vy + h * 0.02);
+    pg.bezierVertex(
+      vx - w * 0.04,
+      vy + h * 0.1,
+      vx - w * 0.045,
+      vy + h * 0.2,
+      vx - w * 0.03,
+      vy + h * 0.3,
+    );
+    pg.bezierVertex(
+      vx - w * 0.02,
+      vy + h * 0.32,
+      vx + w * 0.02,
+      vy + h * 0.32,
+      vx + w * 0.03,
+      vy + h * 0.3,
+    );
+    pg.bezierVertex(
+      vx + w * 0.045,
+      vy + h * 0.2,
+      vx + w * 0.04,
+      vy + h * 0.1,
+      vx + w * 0.035,
+      vy + h * 0.02,
+    );
     pg.endShape(CLOSE);
 
     // Legs
@@ -136,17 +162,45 @@ paintings.push({
     // Left leg
     pg.beginShape();
     pg.vertex(vx - w * 0.02, vy + h * 0.28);
-    pg.bezierVertex(vx - w * 0.025, vy + h * 0.35, vx - w * 0.02, vy + h * 0.42, vx - w * 0.015, vy + h * 0.5);
+    pg.bezierVertex(
+      vx - w * 0.025,
+      vy + h * 0.35,
+      vx - w * 0.02,
+      vy + h * 0.42,
+      vx - w * 0.015,
+      vy + h * 0.5,
+    );
     pg.vertex(vx - w * 0.005, vy + h * 0.5);
-    pg.bezierVertex(vx - w * 0.008, vy + h * 0.42, vx - w * 0.01, vy + h * 0.35, vx - w * 0.005, vy + h * 0.28);
+    pg.bezierVertex(
+      vx - w * 0.008,
+      vy + h * 0.42,
+      vx - w * 0.01,
+      vy + h * 0.35,
+      vx - w * 0.005,
+      vy + h * 0.28,
+    );
     pg.endShape(CLOSE);
 
     // Right leg (weight-bearing, slightly bent)
     pg.beginShape();
     pg.vertex(vx + w * 0.005, vy + h * 0.28);
-    pg.bezierVertex(vx + w * 0.015, vy + h * 0.35, vx + w * 0.02, vy + h * 0.42, vx + w * 0.018, vy + h * 0.5);
+    pg.bezierVertex(
+      vx + w * 0.015,
+      vy + h * 0.35,
+      vx + w * 0.02,
+      vy + h * 0.42,
+      vx + w * 0.018,
+      vy + h * 0.5,
+    );
     pg.vertex(vx + w * 0.028, vy + h * 0.5);
-    pg.bezierVertex(vx + w * 0.033, vy + h * 0.42, vx + w * 0.028, vy + h * 0.35, vx + w * 0.02, vy + h * 0.28);
+    pg.bezierVertex(
+      vx + w * 0.033,
+      vy + h * 0.42,
+      vx + w * 0.028,
+      vy + h * 0.35,
+      vx + w * 0.02,
+      vy + h * 0.28,
+    );
     pg.endShape(CLOSE);
 
     // Head
@@ -172,34 +226,104 @@ paintings.push({
     // Hair flowing left
     pg.beginShape();
     pg.vertex(vx - w * 0.02, vy - h * 0.06);
-    pg.bezierVertex(vx - w * 0.06, vy - h * 0.02, vx - w * 0.08, vy + h * 0.1, vx - w * 0.06, vy + h * 0.25);
-    pg.bezierVertex(vx - w * 0.05, vy + h * 0.3, vx - w * 0.04, vy + h * 0.35, vx - w * 0.05, vy + h * 0.4);
+    pg.bezierVertex(
+      vx - w * 0.06,
+      vy - h * 0.02,
+      vx - w * 0.08,
+      vy + h * 0.1,
+      vx - w * 0.06,
+      vy + h * 0.25,
+    );
+    pg.bezierVertex(
+      vx - w * 0.05,
+      vy + h * 0.3,
+      vx - w * 0.04,
+      vy + h * 0.35,
+      vx - w * 0.05,
+      vy + h * 0.4,
+    );
     pg.vertex(vx - w * 0.04, vy + h * 0.38);
-    pg.bezierVertex(vx - w * 0.035, vy + h * 0.3, vx - w * 0.04, vy + h * 0.2, vx - w * 0.05, vy + h * 0.1);
-    pg.bezierVertex(vx - w * 0.05, vy + h * 0.0, vx - w * 0.04, vy - h * 0.03, vx - w * 0.02, vy - h * 0.04);
+    pg.bezierVertex(
+      vx - w * 0.035,
+      vy + h * 0.3,
+      vx - w * 0.04,
+      vy + h * 0.2,
+      vx - w * 0.05,
+      vy + h * 0.1,
+    );
+    pg.bezierVertex(
+      vx - w * 0.05,
+      vy + h * 0.0,
+      vx - w * 0.04,
+      vy - h * 0.03,
+      vx - w * 0.02,
+      vy - h * 0.04,
+    );
     pg.endShape(CLOSE);
 
     // Hair right side
     pg.fill(200, 170, 100, 170);
     pg.beginShape();
     pg.vertex(vx + w * 0.02, vy - h * 0.06);
-    pg.bezierVertex(vx + w * 0.04, vy - h * 0.02, vx + w * 0.05, vy + h * 0.05, vx + w * 0.04, vy + h * 0.15);
-    pg.bezierVertex(vx + w * 0.035, vy + h * 0.2, vx + w * 0.03, vy + h * 0.25, vx + w * 0.035, vy + h * 0.3);
+    pg.bezierVertex(
+      vx + w * 0.04,
+      vy - h * 0.02,
+      vx + w * 0.05,
+      vy + h * 0.05,
+      vx + w * 0.04,
+      vy + h * 0.15,
+    );
+    pg.bezierVertex(
+      vx + w * 0.035,
+      vy + h * 0.2,
+      vx + w * 0.03,
+      vy + h * 0.25,
+      vx + w * 0.035,
+      vy + h * 0.3,
+    );
     pg.vertex(vx + w * 0.025, vy + h * 0.28);
-    pg.bezierVertex(vx + w * 0.02, vy + h * 0.2, vx + w * 0.025, vy + h * 0.1, vx + w * 0.03, vy + h * 0.02);
-    pg.bezierVertex(vx + w * 0.03, vy - h * 0.02, vx + w * 0.025, vy - h * 0.05, vx + w * 0.02, vy - h * 0.06);
+    pg.bezierVertex(
+      vx + w * 0.02,
+      vy + h * 0.2,
+      vx + w * 0.025,
+      vy + h * 0.1,
+      vx + w * 0.03,
+      vy + h * 0.02,
+    );
+    pg.bezierVertex(
+      vx + w * 0.03,
+      vy - h * 0.02,
+      vx + w * 0.025,
+      vy - h * 0.05,
+      vx + w * 0.02,
+      vy - h * 0.06,
+    );
     pg.endShape(CLOSE);
 
     // Hair strands over body (modesty)
     pg.fill(195, 165, 95, 140);
     pg.beginShape();
     pg.vertex(vx - w * 0.01, vy + h * 0.0);
-    pg.bezierVertex(vx - w * 0.03, vy + h * 0.1, vx - w * 0.04, vy + h * 0.2, vx - w * 0.035, vy + h * 0.35);
+    pg.bezierVertex(
+      vx - w * 0.03,
+      vy + h * 0.1,
+      vx - w * 0.04,
+      vy + h * 0.2,
+      vx - w * 0.035,
+      vy + h * 0.35,
+    );
     pg.vertex(vx - w * 0.025, vy + h * 0.34);
-    pg.bezierVertex(vx - w * 0.025, vy + h * 0.2, vx - w * 0.02, vy + h * 0.1, vx, vy + h * 0.02);
+    pg.bezierVertex(
+      vx - w * 0.025,
+      vy + h * 0.2,
+      vx - w * 0.02,
+      vy + h * 0.1,
+      vx,
+      vy + h * 0.02,
+    );
     pg.endShape(CLOSE);
 
-    // Right hand (covering) 
+    // Right hand (covering)
     pg.fill(230, 205, 180);
     pg.ellipse(vx + w * 0.02, vy + h * 0.08, w * 0.03, h * 0.03);
 
@@ -207,7 +331,14 @@ paintings.push({
     pg.fill(228, 203, 178);
     pg.beginShape();
     pg.vertex(vx - w * 0.035, vy + h * 0.05);
-    pg.bezierVertex(vx - w * 0.05, vy + h * 0.04, vx - w * 0.04, vy + h * 0.02, vx - w * 0.03, vy + h * 0.03);
+    pg.bezierVertex(
+      vx - w * 0.05,
+      vy + h * 0.04,
+      vx - w * 0.04,
+      vy + h * 0.02,
+      vx - w * 0.03,
+      vy + h * 0.03,
+    );
     pg.endShape();
     pg.ellipse(vx - w * 0.035, vy + h * 0.04, w * 0.025, h * 0.02);
 
@@ -219,12 +350,26 @@ paintings.push({
     pg.fill(180, 200, 210, 120);
     pg.beginShape();
     pg.vertex(zx - w * 0.02, zy - h * 0.05);
-    pg.bezierVertex(zx - w * 0.1, zy - h * 0.15, zx - w * 0.12, zy - h * 0.05, zx - w * 0.08, zy + h * 0.02);
+    pg.bezierVertex(
+      zx - w * 0.1,
+      zy - h * 0.15,
+      zx - w * 0.12,
+      zy - h * 0.05,
+      zx - w * 0.08,
+      zy + h * 0.02,
+    );
     pg.endShape(CLOSE);
 
     pg.beginShape();
     pg.vertex(zx - w * 0.02, zy - h * 0.02);
-    pg.bezierVertex(zx - w * 0.12, zy - h * 0.08, zx - w * 0.14, zy + h * 0.02, zx - w * 0.06, zy + h * 0.08);
+    pg.bezierVertex(
+      zx - w * 0.12,
+      zy - h * 0.08,
+      zx - w * 0.14,
+      zy + h * 0.02,
+      zx - w * 0.06,
+      zy + h * 0.08,
+    );
     pg.endShape(CLOSE);
 
     // Zephyr body
@@ -233,9 +378,23 @@ paintings.push({
     // Zephyr torso
     pg.beginShape();
     pg.vertex(zx - w * 0.015, zy + h * 0.03);
-    pg.bezierVertex(zx - w * 0.02, zy + h * 0.1, zx - w * 0.015, zy + h * 0.18, zx - w * 0.01, zy + h * 0.25);
+    pg.bezierVertex(
+      zx - w * 0.02,
+      zy + h * 0.1,
+      zx - w * 0.015,
+      zy + h * 0.18,
+      zx - w * 0.01,
+      zy + h * 0.25,
+    );
     pg.vertex(zx + w * 0.01, zy + h * 0.25);
-    pg.bezierVertex(zx + w * 0.015, zy + h * 0.18, zx + w * 0.02, zy + h * 0.1, zx + w * 0.015, zy + h * 0.03);
+    pg.bezierVertex(
+      zx + w * 0.015,
+      zy + h * 0.18,
+      zx + w * 0.02,
+      zy + h * 0.1,
+      zx + w * 0.015,
+      zy + h * 0.03,
+    );
     pg.endShape(CLOSE);
 
     // Chloris (intertwined)
@@ -243,9 +402,23 @@ paintings.push({
     pg.ellipse(zx + w * 0.035, zy + h * 0.02, w * 0.04, h * 0.06);
     pg.beginShape();
     pg.vertex(zx + w * 0.02, zy + h * 0.05);
-    pg.bezierVertex(zx + w * 0.015, zy + h * 0.12, zx + w * 0.02, zy + h * 0.2, zx + w * 0.025, zy + h * 0.28);
+    pg.bezierVertex(
+      zx + w * 0.015,
+      zy + h * 0.12,
+      zx + w * 0.02,
+      zy + h * 0.2,
+      zx + w * 0.025,
+      zy + h * 0.28,
+    );
     pg.vertex(zx + w * 0.04, zy + h * 0.28);
-    pg.bezierVertex(zx + w * 0.045, zy + h * 0.2, zx + w * 0.04, zy + h * 0.12, zx + w * 0.035, zy + h * 0.05);
+    pg.bezierVertex(
+      zx + w * 0.045,
+      zy + h * 0.2,
+      zx + w * 0.04,
+      zy + h * 0.12,
+      zx + w * 0.035,
+      zy + h * 0.05,
+    );
     pg.endShape(CLOSE);
 
     // Wind lines
@@ -254,7 +427,16 @@ paintings.push({
     pg.noFill();
     for (var wl = 0; wl < 8; wl++) {
       var wly = zy - h * 0.05 + wl * h * 0.04;
-      pg.bezier(zx + w * 0.03, wly, zx + w * 0.1, wly - h * 0.02, zx + w * 0.2, wly + h * 0.01, vx - w * 0.06, wly);
+      pg.bezier(
+        zx + w * 0.03,
+        wly,
+        zx + w * 0.1,
+        wly - h * 0.02,
+        zx + w * 0.2,
+        wly + h * 0.01,
+        vx - w * 0.06,
+        wly,
+      );
     }
 
     // Zephyr blowing cheeks
@@ -270,18 +452,53 @@ paintings.push({
     pg.fill(185, 80, 80, 150);
     pg.beginShape();
     pg.vertex(nx - w * 0.04, ny - h * 0.05);
-    pg.bezierVertex(nx - w * 0.08, ny + h * 0.05, nx - w * 0.1, ny + h * 0.15, nx - w * 0.08, ny + h * 0.3);
-    pg.bezierVertex(nx - w * 0.06, ny + h * 0.35, nx + w * 0.02, ny + h * 0.35, nx + w * 0.03, ny + h * 0.3);
-    pg.bezierVertex(nx + w * 0.04, ny + h * 0.15, nx + w * 0.02, ny + h * 0.05, nx, ny - h * 0.05);
+    pg.bezierVertex(
+      nx - w * 0.08,
+      ny + h * 0.05,
+      nx - w * 0.1,
+      ny + h * 0.15,
+      nx - w * 0.08,
+      ny + h * 0.3,
+    );
+    pg.bezierVertex(
+      nx - w * 0.06,
+      ny + h * 0.35,
+      nx + w * 0.02,
+      ny + h * 0.35,
+      nx + w * 0.03,
+      ny + h * 0.3,
+    );
+    pg.bezierVertex(
+      nx + w * 0.04,
+      ny + h * 0.15,
+      nx + w * 0.02,
+      ny + h * 0.05,
+      nx,
+      ny - h * 0.05,
+    );
     pg.endShape(CLOSE);
 
     // White dress underneath
     pg.fill(235, 230, 220);
     pg.beginShape();
     pg.vertex(nx - w * 0.015, ny + h * 0.05);
-    pg.bezierVertex(nx - w * 0.02, ny + h * 0.15, nx - w * 0.025, ny + h * 0.3, nx - w * 0.03, ny + h * 0.45);
+    pg.bezierVertex(
+      nx - w * 0.02,
+      ny + h * 0.15,
+      nx - w * 0.025,
+      ny + h * 0.3,
+      nx - w * 0.03,
+      ny + h * 0.45,
+    );
     pg.vertex(nx + w * 0.02, ny + h * 0.45);
-    pg.bezierVertex(nx + w * 0.02, ny + h * 0.3, nx + w * 0.015, ny + h * 0.15, nx + w * 0.01, ny + h * 0.05);
+    pg.bezierVertex(
+      nx + w * 0.02,
+      ny + h * 0.3,
+      nx + w * 0.015,
+      ny + h * 0.15,
+      nx + w * 0.01,
+      ny + h * 0.05,
+    );
     pg.endShape(CLOSE);
 
     // Nymph head
@@ -293,9 +510,23 @@ paintings.push({
     pg.ellipse(nx - w * 0.01, ny - h * 0.045, w * 0.045, h * 0.04);
     pg.beginShape();
     pg.vertex(nx - w * 0.03, ny - h * 0.03);
-    pg.bezierVertex(nx - w * 0.035, ny + h * 0.05, nx - w * 0.03, ny + h * 0.1, nx - w * 0.025, ny + h * 0.15);
+    pg.bezierVertex(
+      nx - w * 0.035,
+      ny + h * 0.05,
+      nx - w * 0.03,
+      ny + h * 0.1,
+      nx - w * 0.025,
+      ny + h * 0.15,
+    );
     pg.vertex(nx - w * 0.02, ny + h * 0.12);
-    pg.bezierVertex(nx - w * 0.025, ny + h * 0.05, nx - w * 0.025, ny, nx - w * 0.02, ny - h * 0.02);
+    pg.bezierVertex(
+      nx - w * 0.025,
+      ny + h * 0.05,
+      nx - w * 0.025,
+      ny,
+      nx - w * 0.02,
+      ny - h * 0.02,
+    );
     pg.endShape(CLOSE);
 
     // Arms reaching toward Venus
@@ -304,9 +535,23 @@ paintings.push({
     pg.stroke(200, 180, 160, 80);
     pg.beginShape();
     pg.vertex(nx - w * 0.02, ny + h * 0.06);
-    pg.bezierVertex(nx - w * 0.06, ny + h * 0.04, nx - w * 0.1, ny + h * 0.08, nx - w * 0.12, ny + h * 0.06);
+    pg.bezierVertex(
+      nx - w * 0.06,
+      ny + h * 0.04,
+      nx - w * 0.1,
+      ny + h * 0.08,
+      nx - w * 0.12,
+      ny + h * 0.06,
+    );
     pg.vertex(nx - w * 0.12, ny + h * 0.08);
-    pg.bezierVertex(nx - w * 0.1, ny + h * 0.1, nx - w * 0.06, ny + h * 0.07, nx - w * 0.02, ny + h * 0.08);
+    pg.bezierVertex(
+      nx - w * 0.1,
+      ny + h * 0.1,
+      nx - w * 0.06,
+      ny + h * 0.07,
+      nx - w * 0.02,
+      ny + h * 0.08,
+    );
     pg.endShape(CLOSE);
     pg.noStroke();
 
@@ -323,9 +568,19 @@ paintings.push({
     ];
     for (var fi = 0; fi < flowerPositions.length; fi++) {
       pg.fill(255, 210, 210, 140);
-      pg.ellipse(flowerPositions[fi][0], flowerPositions[fi][1], w * 0.012, h * 0.012);
+      pg.ellipse(
+        flowerPositions[fi][0],
+        flowerPositions[fi][1],
+        w * 0.012,
+        h * 0.012,
+      );
       pg.fill(255, 255, 200, 120);
-      pg.ellipse(flowerPositions[fi][0], flowerPositions[fi][1], w * 0.005, h * 0.005);
+      pg.ellipse(
+        flowerPositions[fi][0],
+        flowerPositions[fi][1],
+        w * 0.005,
+        h * 0.005,
+      );
     }
 
     // === SCATTERED ROSES in air ===

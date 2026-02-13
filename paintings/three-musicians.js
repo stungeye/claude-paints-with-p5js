@@ -250,7 +250,7 @@ paintings.push({
         w * 0.71 + (mn % 5) * w * 0.03,
         h * 0.29 + floor(mn / 5) * h * 0.065 + (mn % 3) * h * 0.015,
         w * 0.008,
-        h * 0.006
+        h * 0.006,
       );
     }
 
@@ -272,7 +272,16 @@ paintings.push({
     pg.stroke(45, 35, 28);
     pg.strokeWeight(w * 0.008);
     pg.noFill();
-    pg.bezier(w * 0.6, h * 0.66, w * 0.65, h * 0.62, w * 0.7, h * 0.6, w * 0.72, h * 0.62);
+    pg.bezier(
+      w * 0.6,
+      h * 0.66,
+      w * 0.65,
+      h * 0.62,
+      w * 0.7,
+      h * 0.6,
+      w * 0.72,
+      h * 0.62,
+    );
 
     // Dog paws
     pg.noStroke();

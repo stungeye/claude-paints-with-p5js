@@ -90,7 +90,7 @@ paintings.push({
         w * 0.38 + (fi % 4) * w * 0.08,
         h * 0.7 + floor(fi / 4) * h * 0.05,
         w * 0.015,
-        w * 0.015
+        w * 0.015,
       );
     }
 
@@ -125,7 +125,14 @@ paintings.push({
     pg.beginShape();
     pg.vertex(w * 0.35, h * 0.52);
     pg.bezierVertex(w * 0.4, h * 0.55, w * 0.48, h * 0.56, w * 0.55, h * 0.55);
-    pg.bezierVertex(w * 0.6, h * 0.545, w * 0.63, h * 0.54, w * 0.65, h * 0.535);
+    pg.bezierVertex(
+      w * 0.6,
+      h * 0.545,
+      w * 0.63,
+      h * 0.54,
+      w * 0.65,
+      h * 0.535,
+    );
     pg.vertex(w * 0.65, h * 0.56);
     pg.bezierVertex(w * 0.6, h * 0.58, w * 0.52, h * 0.6, w * 0.42, h * 0.6);
     pg.bezierVertex(w * 0.38, h * 0.6, w * 0.35, h * 0.58, w * 0.33, h * 0.56);
@@ -228,9 +235,23 @@ paintings.push({
     pg.fill(95, 65, 45);
     pg.beginShape();
     pg.vertex(sx - w * 0.05, sy + h * 0.05);
-    pg.bezierVertex(sx - w * 0.08, sy + h * 0.1, sx - w * 0.1, sy + h * 0.15, sx - w * 0.08, sy + h * 0.2);
+    pg.bezierVertex(
+      sx - w * 0.08,
+      sy + h * 0.1,
+      sx - w * 0.1,
+      sy + h * 0.15,
+      sx - w * 0.08,
+      sy + h * 0.2,
+    );
     pg.vertex(sx - w * 0.06, sy + h * 0.2);
-    pg.bezierVertex(sx - w * 0.08, sy + h * 0.15, sx - w * 0.06, sy + h * 0.1, sx - w * 0.04, sy + h * 0.06);
+    pg.bezierVertex(
+      sx - w * 0.08,
+      sy + h * 0.15,
+      sx - w * 0.06,
+      sy + h * 0.1,
+      sx - w * 0.04,
+      sy + h * 0.06,
+    );
     pg.endShape(CLOSE);
 
     // Bouquet of flowers
@@ -262,14 +283,20 @@ paintings.push({
     pg.ellipse(catX - w * 0.015, catY - h * 0.015, w * 0.02, h * 0.02);
     // Ears
     pg.triangle(
-      catX - w * 0.02, catY - h * 0.02,
-      catX - w * 0.025, catY - h * 0.035,
-      catX - w * 0.015, catY - h * 0.025
+      catX - w * 0.02,
+      catY - h * 0.02,
+      catX - w * 0.025,
+      catY - h * 0.035,
+      catX - w * 0.015,
+      catY - h * 0.025,
     );
     pg.triangle(
-      catX - w * 0.008, catY - h * 0.02,
-      catX - w * 0.012, catY - h * 0.035,
-      catX - w * 0.003, catY - h * 0.025
+      catX - w * 0.008,
+      catY - h * 0.02,
+      catX - w * 0.012,
+      catY - h * 0.035,
+      catX - w * 0.003,
+      catY - h * 0.025,
     );
     // Eyes (glowing)
     pg.fill(180, 180, 40);
@@ -279,7 +306,16 @@ paintings.push({
     pg.noFill();
     pg.stroke(15, 12, 10);
     pg.strokeWeight(w * 0.004);
-    pg.bezier(catX + w * 0.02, catY, catX + w * 0.03, catY - h * 0.02, catX + w * 0.035, catY - h * 0.04, catX + w * 0.025, catY - h * 0.05);
+    pg.bezier(
+      catX + w * 0.02,
+      catY,
+      catX + w * 0.03,
+      catY - h * 0.02,
+      catX + w * 0.035,
+      catY - h * 0.04,
+      catX + w * 0.025,
+      catY - h * 0.05,
+    );
     pg.noStroke();
   },
 });

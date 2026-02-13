@@ -71,62 +71,20 @@ paintings.push({
     pg.fill(100, 115, 100, 120);
     pg.beginShape();
     pg.vertex(w * 0.1, h * 0.45);
-    pg.bezierVertex(
-      w * 0.15,
-      h * 0.38,
-      w * 0.2,
-      h * 0.35,
-      w * 0.25,
-      h * 0.32
-    );
-    pg.bezierVertex(
-      w * 0.3,
-      h * 0.29,
-      w * 0.28,
-      h * 0.25,
-      w * 0.22,
-      h * 0.24
-    );
+    pg.bezierVertex(w * 0.15, h * 0.38, w * 0.2, h * 0.35, w * 0.25, h * 0.32);
+    pg.bezierVertex(w * 0.3, h * 0.29, w * 0.28, h * 0.25, w * 0.22, h * 0.24);
     pg.vertex(w * 0.24, h * 0.24);
-    pg.bezierVertex(
-      w * 0.3,
-      h * 0.25,
-      w * 0.32,
-      h * 0.3,
-      w * 0.27,
-      h * 0.34
-    );
-    pg.bezierVertex(
-      w * 0.22,
-      h * 0.38,
-      w * 0.17,
-      h * 0.42,
-      w * 0.12,
-      h * 0.45
-    );
+    pg.bezierVertex(w * 0.3, h * 0.25, w * 0.32, h * 0.3, w * 0.27, h * 0.34);
+    pg.bezierVertex(w * 0.22, h * 0.38, w * 0.17, h * 0.42, w * 0.12, h * 0.45);
     pg.endShape(CLOSE);
 
     // Right side winding path
     pg.fill(105, 115, 95, 100);
     pg.beginShape();
     pg.vertex(w * 0.85, h * 0.4);
-    pg.bezierVertex(
-      w * 0.8,
-      h * 0.35,
-      w * 0.78,
-      h * 0.3,
-      w * 0.82,
-      h * 0.25
-    );
+    pg.bezierVertex(w * 0.8, h * 0.35, w * 0.78, h * 0.3, w * 0.82, h * 0.25);
     pg.vertex(w * 0.84, h * 0.25);
-    pg.bezierVertex(
-      w * 0.8,
-      h * 0.3,
-      w * 0.82,
-      h * 0.36,
-      w * 0.87,
-      h * 0.4
-    );
+    pg.bezierVertex(w * 0.8, h * 0.3, w * 0.82, h * 0.36, w * 0.87, h * 0.4);
     pg.endShape(CLOSE);
 
     // Bridge hint on left
@@ -161,107 +119,37 @@ paintings.push({
     pg.noStroke();
     pg.beginShape();
     pg.vertex(w * 0.38, h * 0.12);
-    pg.bezierVertex(
-      w * 0.34,
-      h * 0.1,
-      w * 0.32,
-      h * 0.13,
-      w * 0.3,
-      h * 0.2
-    );
-    pg.bezierVertex(
-      w * 0.28,
-      h * 0.3,
-      w * 0.27,
-      h * 0.4,
-      w * 0.28,
-      h * 0.5
-    );
-    pg.bezierVertex(
-      w * 0.29,
-      h * 0.55,
-      w * 0.31,
-      h * 0.58,
-      w * 0.33,
-      h * 0.58
-    );
+    pg.bezierVertex(w * 0.34, h * 0.1, w * 0.32, h * 0.13, w * 0.3, h * 0.2);
+    pg.bezierVertex(w * 0.28, h * 0.3, w * 0.27, h * 0.4, w * 0.28, h * 0.5);
+    pg.bezierVertex(w * 0.29, h * 0.55, w * 0.31, h * 0.58, w * 0.33, h * 0.58);
     pg.vertex(w * 0.35, h * 0.55);
     pg.vertex(w * 0.35, h * 0.3);
-    pg.bezierVertex(
-      w * 0.35,
-      h * 0.2,
-      w * 0.36,
-      h * 0.14,
-      w * 0.38,
-      h * 0.12
-    );
+    pg.bezierVertex(w * 0.35, h * 0.2, w * 0.36, h * 0.14, w * 0.38, h * 0.12);
     pg.endShape(CLOSE);
 
     // Hair - right side
     pg.beginShape();
     pg.vertex(w * 0.62, h * 0.12);
-    pg.bezierVertex(
-      w * 0.66,
-      h * 0.1,
-      w * 0.68,
-      h * 0.13,
-      w * 0.7,
-      h * 0.2
-    );
-    pg.bezierVertex(
-      w * 0.72,
-      h * 0.3,
-      w * 0.73,
-      h * 0.4,
-      w * 0.72,
-      h * 0.5
-    );
-    pg.bezierVertex(
-      w * 0.71,
-      h * 0.55,
-      w * 0.69,
-      h * 0.58,
-      w * 0.67,
-      h * 0.58
-    );
+    pg.bezierVertex(w * 0.66, h * 0.1, w * 0.68, h * 0.13, w * 0.7, h * 0.2);
+    pg.bezierVertex(w * 0.72, h * 0.3, w * 0.73, h * 0.4, w * 0.72, h * 0.5);
+    pg.bezierVertex(w * 0.71, h * 0.55, w * 0.69, h * 0.58, w * 0.67, h * 0.58);
     pg.vertex(w * 0.65, h * 0.55);
     pg.vertex(w * 0.65, h * 0.3);
-    pg.bezierVertex(
-      w * 0.65,
-      h * 0.2,
-      w * 0.64,
-      h * 0.14,
-      w * 0.62,
-      h * 0.12
-    );
+    pg.bezierVertex(w * 0.65, h * 0.2, w * 0.64, h * 0.14, w * 0.62, h * 0.12);
     pg.endShape(CLOSE);
 
     // Hair top
     pg.beginShape();
     pg.vertex(w * 0.38, h * 0.12);
-    pg.bezierVertex(
-      w * 0.42,
-      h * 0.06,
-      w * 0.48,
-      h * 0.04,
-      w * 0.5,
-      h * 0.04
-    );
-    pg.bezierVertex(
-      w * 0.52,
-      h * 0.04,
-      w * 0.58,
-      h * 0.06,
-      w * 0.62,
-      h * 0.12
-    );
+    pg.bezierVertex(w * 0.42, h * 0.06, w * 0.48, h * 0.04, w * 0.5, h * 0.04);
+    pg.bezierVertex(w * 0.52, h * 0.04, w * 0.58, h * 0.06, w * 0.62, h * 0.12);
     pg.bezierVertex(
       w * 0.58,
       h * 0.08,
       w * 0.53,
       h * 0.065,
       w * 0.5,
-      h * 0.065
+      h * 0.065,
     );
     pg.bezierVertex(
       w * 0.47,
@@ -269,7 +157,7 @@ paintings.push({
       w * 0.42,
       h * 0.08,
       w * 0.38,
-      h * 0.12
+      h * 0.12,
     );
     pg.endShape(CLOSE);
 
@@ -277,56 +165,14 @@ paintings.push({
     pg.fill(30, 25, 18, 80);
     pg.beginShape();
     pg.vertex(w * 0.35, h * 0.06);
-    pg.bezierVertex(
-      w * 0.42,
-      h * 0.02,
-      w * 0.58,
-      h * 0.02,
-      w * 0.65,
-      h * 0.06
-    );
-    pg.bezierVertex(
-      w * 0.7,
-      h * 0.15,
-      w * 0.73,
-      h * 0.35,
-      w * 0.72,
-      h * 0.5
-    );
+    pg.bezierVertex(w * 0.42, h * 0.02, w * 0.58, h * 0.02, w * 0.65, h * 0.06);
+    pg.bezierVertex(w * 0.7, h * 0.15, w * 0.73, h * 0.35, w * 0.72, h * 0.5);
     pg.vertex(w * 0.68, h * 0.5);
-    pg.bezierVertex(
-      w * 0.69,
-      h * 0.35,
-      w * 0.67,
-      h * 0.15,
-      w * 0.63,
-      h * 0.08
-    );
-    pg.bezierVertex(
-      w * 0.56,
-      h * 0.04,
-      w * 0.44,
-      h * 0.04,
-      w * 0.37,
-      h * 0.08
-    );
-    pg.bezierVertex(
-      w * 0.33,
-      h * 0.15,
-      w * 0.31,
-      h * 0.35,
-      w * 0.32,
-      h * 0.5
-    );
+    pg.bezierVertex(w * 0.69, h * 0.35, w * 0.67, h * 0.15, w * 0.63, h * 0.08);
+    pg.bezierVertex(w * 0.56, h * 0.04, w * 0.44, h * 0.04, w * 0.37, h * 0.08);
+    pg.bezierVertex(w * 0.33, h * 0.15, w * 0.31, h * 0.35, w * 0.32, h * 0.5);
     pg.vertex(w * 0.28, h * 0.5);
-    pg.bezierVertex(
-      w * 0.27,
-      h * 0.35,
-      w * 0.3,
-      h * 0.15,
-      w * 0.35,
-      h * 0.06
-    );
+    pg.bezierVertex(w * 0.27, h * 0.35, w * 0.3, h * 0.15, w * 0.35, h * 0.06);
     pg.endShape(CLOSE);
 
     // Face - oval
@@ -354,32 +200,86 @@ paintings.push({
 
     // Cheek shadows
     pg.fill(180, 150, 115, 80);
-    pg.ellipse(faceX - faceW * 0.25, faceY + faceH * 0.1, faceW * 0.3, faceH * 0.25);
-    pg.ellipse(faceX + faceW * 0.25, faceY + faceH * 0.1, faceW * 0.3, faceH * 0.25);
+    pg.ellipse(
+      faceX - faceW * 0.25,
+      faceY + faceH * 0.1,
+      faceW * 0.3,
+      faceH * 0.25,
+    );
+    pg.ellipse(
+      faceX + faceW * 0.25,
+      faceY + faceH * 0.1,
+      faceW * 0.3,
+      faceH * 0.25,
+    );
 
     // Eyes
     pg.fill(35, 25, 18);
     // Left eye
-    pg.ellipse(faceX - faceW * 0.15, faceY - faceH * 0.05, faceW * 0.12, faceH * 0.04);
+    pg.ellipse(
+      faceX - faceW * 0.15,
+      faceY - faceH * 0.05,
+      faceW * 0.12,
+      faceH * 0.04,
+    );
     // Right eye
-    pg.ellipse(faceX + faceW * 0.15, faceY - faceH * 0.05, faceW * 0.12, faceH * 0.04);
+    pg.ellipse(
+      faceX + faceW * 0.15,
+      faceY - faceH * 0.05,
+      faceW * 0.12,
+      faceH * 0.04,
+    );
 
     // Eye whites hint
     pg.fill(220, 200, 175, 100);
-    pg.ellipse(faceX - faceW * 0.15, faceY - faceH * 0.05, faceW * 0.1, faceH * 0.025);
-    pg.ellipse(faceX + faceW * 0.15, faceY - faceH * 0.05, faceW * 0.1, faceH * 0.025);
+    pg.ellipse(
+      faceX - faceW * 0.15,
+      faceY - faceH * 0.05,
+      faceW * 0.1,
+      faceH * 0.025,
+    );
+    pg.ellipse(
+      faceX + faceW * 0.15,
+      faceY - faceH * 0.05,
+      faceW * 0.1,
+      faceH * 0.025,
+    );
 
     // Pupils
     pg.fill(25, 18, 12);
-    pg.ellipse(faceX - faceW * 0.14, faceY - faceH * 0.05, faceW * 0.04, faceH * 0.03);
-    pg.ellipse(faceX + faceW * 0.14, faceY - faceH * 0.05, faceW * 0.04, faceH * 0.03);
+    pg.ellipse(
+      faceX - faceW * 0.14,
+      faceY - faceH * 0.05,
+      faceW * 0.04,
+      faceH * 0.03,
+    );
+    pg.ellipse(
+      faceX + faceW * 0.14,
+      faceY - faceH * 0.05,
+      faceW * 0.04,
+      faceH * 0.03,
+    );
 
     // Eyebrows (very subtle - shaved in original)
     pg.stroke(160, 135, 105, 60);
     pg.strokeWeight(w * 0.003);
     pg.noFill();
-    pg.arc(faceX - faceW * 0.15, faceY - faceH * 0.1, faceW * 0.18, faceH * 0.06, PI + 0.3, TWO_PI - 0.3);
-    pg.arc(faceX + faceW * 0.15, faceY - faceH * 0.1, faceW * 0.18, faceH * 0.06, PI + 0.3, TWO_PI - 0.3);
+    pg.arc(
+      faceX - faceW * 0.15,
+      faceY - faceH * 0.1,
+      faceW * 0.18,
+      faceH * 0.06,
+      PI + 0.3,
+      TWO_PI - 0.3,
+    );
+    pg.arc(
+      faceX + faceW * 0.15,
+      faceY - faceH * 0.1,
+      faceW * 0.18,
+      faceH * 0.06,
+      PI + 0.3,
+      TWO_PI - 0.3,
+    );
 
     // Nose
     pg.stroke(170, 145, 115, 120);
@@ -391,7 +291,12 @@ paintings.push({
     // Nose shadow
     pg.noStroke();
     pg.fill(175, 148, 118, 60);
-    pg.ellipse(faceX + faceW * 0.04, faceY + faceH * 0.06, faceW * 0.06, faceH * 0.12);
+    pg.ellipse(
+      faceX + faceW * 0.04,
+      faceY + faceH * 0.06,
+      faceW * 0.06,
+      faceH * 0.12,
+    );
 
     // The famous smile
     pg.stroke(160, 130, 100, 180);
@@ -435,44 +340,16 @@ paintings.push({
     pg.vertex(w * 0.8, h);
     pg.vertex(w * 0.8, h * 0.7);
     pg.bezierVertex(w * 0.78, h * 0.5, w * 0.72, h * 0.4, w * 0.7, h * 0.35);
-    pg.bezierVertex(
-      w * 0.65,
-      h * 0.32,
-      w * 0.55,
-      h * 0.3,
-      w * 0.5,
-      h * 0.3
-    );
-    pg.bezierVertex(
-      w * 0.45,
-      h * 0.3,
-      w * 0.35,
-      h * 0.32,
-      w * 0.3,
-      h * 0.35
-    );
+    pg.bezierVertex(w * 0.65, h * 0.32, w * 0.55, h * 0.3, w * 0.5, h * 0.3);
+    pg.bezierVertex(w * 0.45, h * 0.3, w * 0.35, h * 0.32, w * 0.3, h * 0.35);
     pg.endShape(CLOSE);
 
     // Neckline
     pg.fill(195, 165, 130);
     pg.beginShape();
     pg.vertex(w * 0.38, h * 0.3);
-    pg.bezierVertex(
-      w * 0.42,
-      h * 0.34,
-      w * 0.48,
-      h * 0.35,
-      w * 0.5,
-      h * 0.35
-    );
-    pg.bezierVertex(
-      w * 0.52,
-      h * 0.35,
-      w * 0.58,
-      h * 0.34,
-      w * 0.62,
-      h * 0.3
-    );
+    pg.bezierVertex(w * 0.42, h * 0.34, w * 0.48, h * 0.35, w * 0.5, h * 0.35);
+    pg.bezierVertex(w * 0.52, h * 0.35, w * 0.58, h * 0.34, w * 0.62, h * 0.3);
     pg.vertex(w * 0.58, h * 0.28);
     pg.bezierVertex(
       w * 0.55,
@@ -480,7 +357,7 @@ paintings.push({
       w * 0.52,
       h * 0.295,
       w * 0.5,
-      h * 0.295
+      h * 0.295,
     );
     pg.bezierVertex(
       w * 0.48,
@@ -488,7 +365,7 @@ paintings.push({
       w * 0.45,
       h * 0.29,
       w * 0.42,
-      h * 0.28
+      h * 0.28,
     );
     pg.endShape(CLOSE);
 
@@ -504,7 +381,7 @@ paintings.push({
       w * 0.32,
       h * 0.7,
       w * 0.3,
-      h * 0.85
+      h * 0.85,
     );
     pg.bezier(
       w * 0.65,
@@ -514,7 +391,7 @@ paintings.push({
       w * 0.68,
       h * 0.7,
       w * 0.7,
-      h * 0.85
+      h * 0.85,
     );
     pg.bezier(
       w * 0.45,
@@ -524,7 +401,7 @@ paintings.push({
       w * 0.4,
       h * 0.7,
       w * 0.38,
-      h * 0.9
+      h * 0.9,
     );
 
     // Dress golden trim at neckline
@@ -547,77 +424,21 @@ paintings.push({
     pg.fill(195, 165, 130);
     pg.beginShape();
     pg.vertex(w * 0.62, h * 0.52);
-    pg.bezierVertex(
-      w * 0.6,
-      h * 0.55,
-      w * 0.55,
-      h * 0.62,
-      w * 0.5,
-      h * 0.63
-    );
-    pg.bezierVertex(
-      w * 0.45,
-      h * 0.64,
-      w * 0.4,
-      h * 0.63,
-      w * 0.38,
-      h * 0.62
-    );
+    pg.bezierVertex(w * 0.6, h * 0.55, w * 0.55, h * 0.62, w * 0.5, h * 0.63);
+    pg.bezierVertex(w * 0.45, h * 0.64, w * 0.4, h * 0.63, w * 0.38, h * 0.62);
     pg.vertex(w * 0.38, h * 0.59);
-    pg.bezierVertex(
-      w * 0.42,
-      h * 0.6,
-      w * 0.48,
-      h * 0.61,
-      w * 0.5,
-      h * 0.6
-    );
-    pg.bezierVertex(
-      w * 0.55,
-      h * 0.59,
-      w * 0.58,
-      h * 0.55,
-      w * 0.6,
-      h * 0.52
-    );
+    pg.bezierVertex(w * 0.42, h * 0.6, w * 0.48, h * 0.61, w * 0.5, h * 0.6);
+    pg.bezierVertex(w * 0.55, h * 0.59, w * 0.58, h * 0.55, w * 0.6, h * 0.52);
     pg.endShape(CLOSE);
 
     // Left hand (resting on right arm)
     pg.fill(200, 170, 135);
     pg.beginShape();
     pg.vertex(w * 0.38, h * 0.57);
-    pg.bezierVertex(
-      w * 0.35,
-      h * 0.58,
-      w * 0.33,
-      h * 0.62,
-      w * 0.35,
-      h * 0.65
-    );
-    pg.bezierVertex(
-      w * 0.37,
-      h * 0.67,
-      w * 0.42,
-      h * 0.68,
-      w * 0.45,
-      h * 0.67
-    );
-    pg.bezierVertex(
-      w * 0.48,
-      h * 0.66,
-      w * 0.5,
-      h * 0.64,
-      w * 0.5,
-      h * 0.62
-    );
-    pg.bezierVertex(
-      w * 0.5,
-      h * 0.6,
-      w * 0.48,
-      h * 0.58,
-      w * 0.45,
-      h * 0.57
-    );
+    pg.bezierVertex(w * 0.35, h * 0.58, w * 0.33, h * 0.62, w * 0.35, h * 0.65);
+    pg.bezierVertex(w * 0.37, h * 0.67, w * 0.42, h * 0.68, w * 0.45, h * 0.67);
+    pg.bezierVertex(w * 0.48, h * 0.66, w * 0.5, h * 0.64, w * 0.5, h * 0.62);
+    pg.bezierVertex(w * 0.5, h * 0.6, w * 0.48, h * 0.58, w * 0.45, h * 0.57);
     pg.endShape(CLOSE);
 
     // Finger creases on left hand
@@ -655,12 +476,7 @@ paintings.push({
       pg.noFill();
       pg.stroke(30, 25, 18, alpha);
       pg.strokeWeight(w * 0.01);
-      pg.rect(
-        e * w * 0.005,
-        e * h * 0.005,
-        w - e * w * 0.01,
-        h - e * h * 0.01
-      );
+      pg.rect(e * w * 0.005, e * h * 0.005, w - e * w * 0.01, h - e * h * 0.01);
     }
   },
 });

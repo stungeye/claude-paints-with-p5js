@@ -56,7 +56,7 @@ paintings.push({
         margin + rInset,
         redTop + rInsetY,
         w - 2 * margin - 2 * rInset,
-        redBottom - redTop - 2 * rInsetY
+        redBottom - redTop - 2 * rInsetY,
       );
     }
 
@@ -69,13 +69,13 @@ paintings.push({
         margin + w * 0.03 + rcInset,
         redTop + h * 0.03 + rcInsetY,
         w - 2 * margin - w * 0.06 - 2 * rcInset,
-        (redBottom - redTop) - h * 0.06 - 2 * rcInsetY
+        redBottom - redTop - h * 0.06 - 2 * rcInsetY,
       );
     }
 
     // Subtle warm variation stripes within red
     for (var rv = 0; rv < 20; rv++) {
-      var rvy = redTop + h * 0.05 + rv * (redBottom - redTop - h * 0.1) / 20;
+      var rvy = redTop + h * 0.05 + (rv * (redBottom - redTop - h * 0.1)) / 20;
       pg.fill(200 + rv * 2, 30 + rv, 25, 8);
       pg.rect(margin + w * 0.02, rvy, w - 2 * margin - w * 0.04, h * 0.02);
     }
@@ -104,7 +104,7 @@ paintings.push({
         margin + bInset,
         blueTop + bInsetY,
         w - 2 * margin - 2 * bInset,
-        blueBottom - blueTop - 2 * bInsetY
+        blueBottom - blueTop - 2 * bInsetY,
       );
     }
 
@@ -117,13 +117,14 @@ paintings.push({
         margin + w * 0.03 + bcInset,
         blueTop + h * 0.03 + bcInsetY,
         w - 2 * margin - w * 0.06 - 2 * bcInset,
-        (blueBottom - blueTop) - h * 0.06 - 2 * bcInsetY
+        blueBottom - blueTop - h * 0.06 - 2 * bcInsetY,
       );
     }
 
     // Blue variation stripes
     for (var bv = 0; bv < 15; bv++) {
-      var bvy = blueTop + h * 0.04 + bv * (blueBottom - blueTop - h * 0.08) / 15;
+      var bvy =
+        blueTop + h * 0.04 + (bv * (blueBottom - blueTop - h * 0.08)) / 15;
       pg.fill(15 + bv, 25 + bv * 2, 140 + bv * 3, 8);
       pg.rect(margin + w * 0.02, bvy, w - 2 * margin - w * 0.04, h * 0.025);
     }
@@ -145,7 +146,12 @@ paintings.push({
     for (var se = 0; se < 8; se++) {
       pg.fill(60, 19, 17, 25 - se * 3);
       pg.rect(margin + se * w * 0.003, redTop, w * 0.008, blueBottom - redTop);
-      pg.rect(w - margin - se * w * 0.003 - w * 0.008, redTop, w * 0.008, blueBottom - redTop);
+      pg.rect(
+        w - margin - se * w * 0.003 - w * 0.008,
+        redTop,
+        w * 0.008,
+        blueBottom - redTop,
+      );
     }
 
     // Overall subtle texture (canvas grain effect)

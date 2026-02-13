@@ -35,7 +35,7 @@ paintings.push({
         120 + random(60),
         90 + random(50),
         50 + random(40),
-        150 + random(100)
+        150 + random(100),
       );
       pg.noFill();
       var x1 = random(-w * 0.1, w * 1.1);
@@ -56,7 +56,7 @@ paintings.push({
         200 + random(55),
         180 + random(60),
         50 + random(80),
-        120 + random(80)
+        120 + random(80),
       );
       pg.strokeWeight(random(w * 0.001, w * 0.005));
       pg.noFill();
@@ -91,7 +91,12 @@ paintings.push({
 
     // Layer 4: White drips
     for (var i4 = 0; i4 < 120; i4++) {
-      pg.stroke(230 + random(25), 230 + random(25), 225 + random(30), 100 + random(100));
+      pg.stroke(
+        230 + random(25),
+        230 + random(25),
+        225 + random(30),
+        100 + random(100),
+      );
       pg.strokeWeight(random(w * 0.001, w * 0.004));
       pg.noFill();
       var x4 = random(-w * 0.1, w * 1.1);
@@ -108,7 +113,12 @@ paintings.push({
 
     // Layer 5: More dark brown dense drips
     for (var i5 = 0; i5 < 100; i5++) {
-      pg.stroke(60 + random(40), 40 + random(30), 20 + random(20), 120 + random(80));
+      pg.stroke(
+        60 + random(40),
+        40 + random(30),
+        20 + random(20),
+        120 + random(80),
+      );
       pg.strokeWeight(random(w * 0.002, w * 0.008));
       pg.noFill();
       var x5 = random(-w * 0.1, w * 1.1);
@@ -132,40 +142,55 @@ paintings.push({
         random(w),
         random(h),
         random(w * 0.002, w * 0.012),
-        random(h * 0.002, h * 0.012)
+        random(h * 0.002, h * 0.012),
       );
     }
 
     // Yellow splatters
     for (var s2 = 0; s2 < 200; s2++) {
-      pg.fill(200 + random(55), 180 + random(60), 40 + random(60), random(80, 200));
+      pg.fill(
+        200 + random(55),
+        180 + random(60),
+        40 + random(60),
+        random(80, 200),
+      );
       pg.ellipse(
         random(w),
         random(h),
         random(w * 0.002, w * 0.008),
-        random(h * 0.002, h * 0.008)
+        random(h * 0.002, h * 0.008),
       );
     }
 
     // White splatters
     for (var s3 = 0; s3 < 150; s3++) {
-      pg.fill(240 + random(15), 240 + random(15), 235 + random(20), random(80, 200));
+      pg.fill(
+        240 + random(15),
+        240 + random(15),
+        235 + random(20),
+        random(80, 200),
+      );
       pg.ellipse(
         random(w),
         random(h),
         random(w * 0.001, w * 0.006),
-        random(h * 0.001, h * 0.006)
+        random(h * 0.001, h * 0.006),
       );
     }
 
     // Brown splatters
     for (var s4 = 0; s4 < 200; s4++) {
-      pg.fill(100 + random(80), 70 + random(50), 30 + random(30), random(80, 200));
+      pg.fill(
+        100 + random(80),
+        70 + random(50),
+        30 + random(30),
+        random(80, 200),
+      );
       pg.ellipse(
         random(w),
         random(h),
         random(w * 0.002, w * 0.01),
-        random(h * 0.002, h * 0.01)
+        random(h * 0.002, h * 0.01),
       );
     }
 

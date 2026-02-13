@@ -64,9 +64,17 @@ paintings.push({
     // Stars
     pg.fill(220, 220, 200, 180);
     var stars = [
-      [0.1, 0.08], [0.2, 0.15], [0.35, 0.05], [0.45, 0.18],
-      [0.55, 0.08], [0.85, 0.1], [0.9, 0.2], [0.15, 0.25],
-      [0.6, 0.22], [0.3, 0.28], [0.82, 0.28],
+      [0.1, 0.08],
+      [0.2, 0.15],
+      [0.35, 0.05],
+      [0.45, 0.18],
+      [0.55, 0.08],
+      [0.85, 0.1],
+      [0.9, 0.2],
+      [0.15, 0.25],
+      [0.6, 0.22],
+      [0.3, 0.28],
+      [0.82, 0.28],
     ];
     for (var si = 0; si < stars.length; si++) {
       pg.ellipse(w * stars[si][0], h * stars[si][1], w * 0.005, w * 0.005);
@@ -81,10 +89,38 @@ paintings.push({
     pg.fill(100, 80, 60);
     pg.beginShape();
     pg.vertex(fx - w * 0.18, fy - h * 0.02);
-    pg.bezierVertex(fx - w * 0.15, fy - h * 0.08, fx - w * 0.05, fy - h * 0.1, fx + w * 0.05, fy - h * 0.08);
-    pg.bezierVertex(fx + w * 0.12, fy - h * 0.06, fx + w * 0.18, fy - h * 0.04, fx + w * 0.2, fy);
-    pg.bezierVertex(fx + w * 0.2, fy + h * 0.04, fx + w * 0.15, fy + h * 0.06, fx + w * 0.05, fy + h * 0.06);
-    pg.bezierVertex(fx - w * 0.05, fy + h * 0.06, fx - w * 0.15, fy + h * 0.04, fx - w * 0.18, fy - h * 0.02);
+    pg.bezierVertex(
+      fx - w * 0.15,
+      fy - h * 0.08,
+      fx - w * 0.05,
+      fy - h * 0.1,
+      fx + w * 0.05,
+      fy - h * 0.08,
+    );
+    pg.bezierVertex(
+      fx + w * 0.12,
+      fy - h * 0.06,
+      fx + w * 0.18,
+      fy - h * 0.04,
+      fx + w * 0.2,
+      fy,
+    );
+    pg.bezierVertex(
+      fx + w * 0.2,
+      fy + h * 0.04,
+      fx + w * 0.15,
+      fy + h * 0.06,
+      fx + w * 0.05,
+      fy + h * 0.06,
+    );
+    pg.bezierVertex(
+      fx - w * 0.05,
+      fy + h * 0.06,
+      fx - w * 0.15,
+      fy + h * 0.04,
+      fx - w * 0.18,
+      fy - h * 0.02,
+    );
     pg.endShape(CLOSE);
 
     // Colorful stripes on robe
@@ -169,11 +205,39 @@ paintings.push({
     pg.fill(175, 140, 80);
     pg.beginShape();
     pg.vertex(lx - w * 0.08, ly);
-    pg.bezierVertex(lx - w * 0.1, ly - h * 0.05, lx - w * 0.06, ly - h * 0.08, lx, ly - h * 0.06);
-    pg.bezierVertex(lx + w * 0.06, ly - h * 0.05, lx + w * 0.1, ly - h * 0.04, lx + w * 0.12, ly - h * 0.02);
-    pg.bezierVertex(lx + w * 0.13, ly, lx + w * 0.12, ly + h * 0.03, lx + w * 0.1, ly + h * 0.04);
+    pg.bezierVertex(
+      lx - w * 0.1,
+      ly - h * 0.05,
+      lx - w * 0.06,
+      ly - h * 0.08,
+      lx,
+      ly - h * 0.06,
+    );
+    pg.bezierVertex(
+      lx + w * 0.06,
+      ly - h * 0.05,
+      lx + w * 0.1,
+      ly - h * 0.04,
+      lx + w * 0.12,
+      ly - h * 0.02,
+    );
+    pg.bezierVertex(
+      lx + w * 0.13,
+      ly,
+      lx + w * 0.12,
+      ly + h * 0.03,
+      lx + w * 0.1,
+      ly + h * 0.04,
+    );
     pg.vertex(lx - w * 0.06, ly + h * 0.04);
-    pg.bezierVertex(lx - w * 0.08, ly + h * 0.03, lx - w * 0.09, ly + h * 0.01, lx - w * 0.08, ly);
+    pg.bezierVertex(
+      lx - w * 0.08,
+      ly + h * 0.03,
+      lx - w * 0.09,
+      ly + h * 0.01,
+      lx - w * 0.08,
+      ly,
+    );
     pg.endShape(CLOSE);
 
     // Lion legs
@@ -203,7 +267,16 @@ paintings.push({
     pg.noFill();
     pg.stroke(165, 130, 70);
     pg.strokeWeight(w * 0.005);
-    pg.bezier(lx + w * 0.12, ly - h * 0.02, lx + w * 0.15, ly - h * 0.08, lx + w * 0.18, ly - h * 0.06, lx + w * 0.17, ly - h * 0.1);
+    pg.bezier(
+      lx + w * 0.12,
+      ly - h * 0.02,
+      lx + w * 0.15,
+      ly - h * 0.08,
+      lx + w * 0.18,
+      ly - h * 0.06,
+      lx + w * 0.17,
+      ly - h * 0.1,
+    );
     // Tail tuft
     pg.noStroke();
     pg.fill(140, 100, 50);

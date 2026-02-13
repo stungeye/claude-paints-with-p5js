@@ -75,7 +75,16 @@ paintings.push({
 
     // Roof edge trim
     pg.fill(200, 195, 185);
-    pg.quad(w * 0.25, h * 0.15, w * 0.75, h * 0.15, w * 0.74, h * 0.16, w * 0.26, h * 0.16);
+    pg.quad(
+      w * 0.25,
+      h * 0.15,
+      w * 0.75,
+      h * 0.15,
+      w * 0.74,
+      h * 0.16,
+      w * 0.26,
+      h * 0.16,
+    );
 
     // === GOTHIC WINDOW (the key element) ===
     var gwx = w * 0.5;

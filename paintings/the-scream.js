@@ -32,7 +32,11 @@ paintings.push({
       if (t < 0.3) {
         c = lerpColor(color(200, 80, 30), color(230, 130, 40), t / 0.3);
       } else if (t < 0.5) {
-        c = lerpColor(color(230, 130, 40), color(220, 160, 50), (t - 0.3) / 0.2);
+        c = lerpColor(
+          color(230, 130, 40),
+          color(220, 160, 50),
+          (t - 0.3) / 0.2,
+        );
       } else if (t < 0.7) {
         c = lerpColor(color(220, 160, 50), color(200, 80, 40), (t - 0.5) / 0.2);
       } else {
@@ -69,7 +73,10 @@ paintings.push({
     pg.beginShape();
     pg.vertex(w * 0.45, h * 0.45);
     for (var fx = w * 0.45; fx <= w; fx += w * 0.03) {
-      var fy = h * 0.45 + sin(fx * 0.02) * h * 0.02 + (fx - w * 0.45) / (w * 0.55) * h * 0.15;
+      var fy =
+        h * 0.45 +
+        sin(fx * 0.02) * h * 0.02 +
+        ((fx - w * 0.45) / (w * 0.55)) * h * 0.15;
       pg.vertex(fx, fy);
     }
     pg.vertex(w, h * 0.7);
@@ -172,9 +179,23 @@ paintings.push({
     pg.fill(50, 55, 80);
     pg.beginShape();
     pg.vertex(figX - w * 0.04, figY);
-    pg.bezierVertex(figX - w * 0.05, figY + h * 0.08, figX - w * 0.06, figY + h * 0.18, figX - w * 0.07, figY + h * 0.32);
+    pg.bezierVertex(
+      figX - w * 0.05,
+      figY + h * 0.08,
+      figX - w * 0.06,
+      figY + h * 0.18,
+      figX - w * 0.07,
+      figY + h * 0.32,
+    );
     pg.vertex(figX + w * 0.04, figY + h * 0.32);
-    pg.bezierVertex(figX + w * 0.03, figY + h * 0.18, figX + w * 0.02, figY + h * 0.08, figX + w * 0.04, figY);
+    pg.bezierVertex(
+      figX + w * 0.03,
+      figY + h * 0.18,
+      figX + w * 0.02,
+      figY + h * 0.08,
+      figX + w * 0.04,
+      figY,
+    );
     pg.endShape(CLOSE);
 
     // Wavy robe effect
@@ -224,17 +245,45 @@ paintings.push({
     // Left hand
     pg.beginShape();
     pg.vertex(figX - w * 0.035, figY - h * 0.06);
-    pg.bezierVertex(figX - w * 0.06, figY - h * 0.04, figX - w * 0.06, figY, figX - w * 0.04, figY + h * 0.01);
+    pg.bezierVertex(
+      figX - w * 0.06,
+      figY - h * 0.04,
+      figX - w * 0.06,
+      figY,
+      figX - w * 0.04,
+      figY + h * 0.01,
+    );
     pg.vertex(figX - w * 0.03, figY);
-    pg.bezierVertex(figX - w * 0.04, figY - h * 0.02, figX - w * 0.045, figY - h * 0.04, figX - w * 0.035, figY - h * 0.05);
+    pg.bezierVertex(
+      figX - w * 0.04,
+      figY - h * 0.02,
+      figX - w * 0.045,
+      figY - h * 0.04,
+      figX - w * 0.035,
+      figY - h * 0.05,
+    );
     pg.endShape(CLOSE);
 
     // Right hand
     pg.beginShape();
     pg.vertex(figX + w * 0.035, figY - h * 0.06);
-    pg.bezierVertex(figX + w * 0.06, figY - h * 0.04, figX + w * 0.06, figY, figX + w * 0.04, figY + h * 0.01);
+    pg.bezierVertex(
+      figX + w * 0.06,
+      figY - h * 0.04,
+      figX + w * 0.06,
+      figY,
+      figX + w * 0.04,
+      figY + h * 0.01,
+    );
     pg.vertex(figX + w * 0.03, figY);
-    pg.bezierVertex(figX + w * 0.04, figY - h * 0.02, figX + w * 0.045, figY - h * 0.04, figX + w * 0.035, figY - h * 0.05);
+    pg.bezierVertex(
+      figX + w * 0.04,
+      figY - h * 0.02,
+      figX + w * 0.045,
+      figY - h * 0.04,
+      figX + w * 0.035,
+      figY - h * 0.05,
+    );
     pg.endShape(CLOSE);
 
     // Wavy distortion lines across entire image

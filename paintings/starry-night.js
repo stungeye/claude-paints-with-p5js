@@ -61,7 +61,10 @@ paintings.push({
 
         pg.beginShape();
         for (var a = 0; a < TWO_PI; a += 0.15) {
-          var rr = radius + sin(a * 3 + ring) * w * 0.008 + random(-w * 0.003, w * 0.003);
+          var rr =
+            radius +
+            sin(a * 3 + ring) * w * 0.008 +
+            random(-w * 0.003, w * 0.003);
           pg.curveVertex(sw.x + cos(a) * rr, sw.y + sin(a) * rr);
         }
         pg.endShape();
@@ -77,7 +80,7 @@ paintings.push({
         30 + random(30),
         50 + random(50),
         120 + random(80),
-        100 + random(80)
+        100 + random(80),
       );
       pg.stroke(blueC);
       pg.strokeWeight(w * 0.004 + random(w * 0.004));
@@ -121,13 +124,13 @@ paintings.push({
       pg.stroke(255, 240, 120, 120);
       pg.strokeWeight(w * 0.003);
       for (var sr = 0; sr < 8; sr++) {
-        var sa = sr * PI / 4 + random(-0.2, 0.2);
+        var sa = (sr * PI) / 4 + random(-0.2, 0.2);
         var sl = star.s * 0.8 + random(star.s * 0.3);
         pg.line(
           star.x + cos(sa) * star.s * 0.4,
           star.y + sin(sa) * star.s * 0.4,
           star.x + cos(sa) * sl,
-          star.y + sin(sa) * sl
+          star.y + sin(sa) * sl,
         );
       }
     }
@@ -174,7 +177,10 @@ paintings.push({
       pg.beginShape();
       for (var ca = 0; ca < PI * 1.5; ca += 0.3) {
         var cr = w * 0.015 + ca * w * 0.005;
-        pg.curveVertex(w * 0.12 + cos(ca + cy) * cr, cyy + sin(ca + cy) * cr * 0.5);
+        pg.curveVertex(
+          w * 0.12 + cos(ca + cy) * cr,
+          cyy + sin(ca + cy) * cr * 0.5,
+        );
       }
       pg.endShape();
     }
@@ -183,8 +189,26 @@ paintings.push({
     pg.stroke(20, 50, 35, 120);
     pg.strokeWeight(w * 0.006);
     pg.noFill();
-    pg.bezier(w * 0.1, h * 0.8, w * 0.09, h * 0.6, w * 0.11, h * 0.4, w * 0.12, h * 0.15);
-    pg.bezier(w * 0.14, h * 0.85, w * 0.15, h * 0.6, w * 0.13, h * 0.35, w * 0.14, h * 0.12);
+    pg.bezier(
+      w * 0.1,
+      h * 0.8,
+      w * 0.09,
+      h * 0.6,
+      w * 0.11,
+      h * 0.4,
+      w * 0.12,
+      h * 0.15,
+    );
+    pg.bezier(
+      w * 0.14,
+      h * 0.85,
+      w * 0.15,
+      h * 0.6,
+      w * 0.13,
+      h * 0.35,
+      w * 0.14,
+      h * 0.12,
+    );
 
     // === ROLLING HILLS ===
     pg.noStroke();
@@ -214,7 +238,12 @@ paintings.push({
       var hx = random(w);
       var hy = random(h * 0.6, h * 0.75);
       pg.stroke(30 + random(30), 55 + random(30), 50 + random(30), 120);
-      pg.line(hx, hy, hx + random(-w * 0.02, w * 0.02), hy + random(-h * 0.005, h * 0.005));
+      pg.line(
+        hx,
+        hy,
+        hx + random(-w * 0.02, w * 0.02),
+        hy + random(-h * 0.005, h * 0.005),
+      );
     }
 
     // === VILLAGE ===
@@ -251,7 +280,7 @@ paintings.push({
         hh.x + houseW / 2 + w * 0.003,
         hh.y - houseH,
         hh.x,
-        hh.y - houseH - h * 0.018
+        hh.y - houseH - h * 0.018,
       );
 
       // Lit window
@@ -266,7 +295,14 @@ paintings.push({
     pg.rect(chX - w * 0.012, chY - h * 0.08, w * 0.024, h * 0.08);
     // Spire
     pg.fill(50, 45, 40);
-    pg.triangle(chX - w * 0.015, chY - h * 0.08, chX + w * 0.015, chY - h * 0.08, chX, chY - h * 0.15);
+    pg.triangle(
+      chX - w * 0.015,
+      chY - h * 0.08,
+      chX + w * 0.015,
+      chY - h * 0.08,
+      chX,
+      chY - h * 0.15,
+    );
 
     // === FOREGROUND (bottom) ===
     pg.fill(20, 35, 30);

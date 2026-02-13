@@ -86,8 +86,8 @@ paintings.push({
       pg.line(0, h * 0.635 + wy * h * 0.025, w, h * 0.635 + wy * h * 0.025);
     }
     for (var wx = 0; wx < 12; wx++) {
-      var wxp = wx * w / 6;
-      var wy2 = (wx % 2 === 0) ? h * 0.635 : h * 0.66;
+      var wxp = (wx * w) / 6;
+      var wy2 = wx % 2 === 0 ? h * 0.635 : h * 0.66;
       pg.line(wxp, wy2, wxp, wy2 + h * 0.025);
     }
 
@@ -155,12 +155,26 @@ paintings.push({
     pg.fill(35, 35, 32);
     pg.beginShape();
     pg.vertex(mx - w * 0.15, h * 0.38);
-    pg.bezierVertex(mx - w * 0.2, h * 0.37, mx - w * 0.22, h * 0.4, mx - w * 0.22, h * 0.45);
+    pg.bezierVertex(
+      mx - w * 0.2,
+      h * 0.37,
+      mx - w * 0.22,
+      h * 0.4,
+      mx - w * 0.22,
+      h * 0.45,
+    );
     pg.vertex(mx - w * 0.15, h * 0.45);
     pg.endShape(CLOSE);
     pg.beginShape();
     pg.vertex(mx + w * 0.15, h * 0.38);
-    pg.bezierVertex(mx + w * 0.2, h * 0.37, mx + w * 0.22, h * 0.4, mx + w * 0.22, h * 0.45);
+    pg.bezierVertex(
+      mx + w * 0.2,
+      h * 0.37,
+      mx + w * 0.22,
+      h * 0.4,
+      mx + w * 0.22,
+      h * 0.45,
+    );
     pg.vertex(mx + w * 0.15, h * 0.45);
     pg.endShape(CLOSE);
 
@@ -217,8 +231,22 @@ paintings.push({
     // Crown
     pg.beginShape();
     pg.vertex(mx - w * 0.055, h * 0.22);
-    pg.bezierVertex(mx - w * 0.06, h * 0.17, mx - w * 0.05, h * 0.14, mx, h * 0.135);
-    pg.bezierVertex(mx + w * 0.05, h * 0.14, mx + w * 0.06, h * 0.17, mx + w * 0.055, h * 0.22);
+    pg.bezierVertex(
+      mx - w * 0.06,
+      h * 0.17,
+      mx - w * 0.05,
+      h * 0.14,
+      mx,
+      h * 0.135,
+    );
+    pg.bezierVertex(
+      mx + w * 0.05,
+      h * 0.14,
+      mx + w * 0.06,
+      h * 0.17,
+      mx + w * 0.055,
+      h * 0.22,
+    );
     pg.endShape(CLOSE);
 
     // Hat band
@@ -264,7 +292,14 @@ paintings.push({
     pg.fill(50, 110, 35);
     pg.beginShape();
     pg.vertex(ax + w * 0.003, ay - as * 0.5);
-    pg.bezierVertex(ax + w * 0.02, ay - as * 0.6, ax + w * 0.03, ay - as * 0.55, ax + w * 0.025, ay - as * 0.48);
+    pg.bezierVertex(
+      ax + w * 0.02,
+      ay - as * 0.6,
+      ax + w * 0.03,
+      ay - as * 0.55,
+      ax + w * 0.025,
+      ay - as * 0.48,
+    );
     pg.endShape(CLOSE);
 
     // Eyes barely visible above apple

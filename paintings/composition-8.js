@@ -1,7 +1,7 @@
 /*
  * Composition 8 by Wassily Kandinsky (1923)
  *
- * Description: An abstract geometric composition on a light/cream 
+ * Description: An abstract geometric composition on a light/cream
  * background. Features a large dark circle in the upper left, intersecting
  * lines and geometric shapes including triangles, circles, semi-circles,
  * checkerboard patterns, and various colored forms. Diagonal lines cross
@@ -156,14 +156,20 @@ paintings.push({
     pg.noFill();
     pg.beginShape();
     for (var wl = 0; wl < 30; wl++) {
-      pg.curveVertex(w * 0.1 + wl * w * 0.028, h * 0.85 + sin(wl * 0.8) * h * 0.03);
+      pg.curveVertex(
+        w * 0.1 + wl * w * 0.028,
+        h * 0.85 + sin(wl * 0.8) * h * 0.03,
+      );
     }
     pg.endShape();
 
     // Another wavy line
     pg.beginShape();
     for (var wl2 = 0; wl2 < 20; wl2++) {
-      pg.curveVertex(w * 0.05 + wl2 * w * 0.04, h * 0.45 + sin(wl2 * 0.6 + 1) * h * 0.025);
+      pg.curveVertex(
+        w * 0.05 + wl2 * w * 0.04,
+        h * 0.45 + sin(wl2 * 0.6 + 1) * h * 0.025,
+      );
     }
     pg.endShape();
 
@@ -174,7 +180,7 @@ paintings.push({
     var bx = w * 0.78;
     var by = h * 0.18;
     for (var bl = 0; bl < 8; bl++) {
-      var ba = bl * PI / 8 + PI * 0.6;
+      var ba = (bl * PI) / 8 + PI * 0.6;
       pg.line(bx, by, bx + cos(ba) * w * 0.06, by + sin(ba) * h * 0.08);
     }
 

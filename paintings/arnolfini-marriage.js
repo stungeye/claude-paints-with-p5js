@@ -121,10 +121,15 @@ paintings.push({
     // Arms of chandelier
     pg.strokeWeight(w * 0.003);
     for (var ci = 0; ci < 6; ci++) {
-      var ca = ci * PI / 3;
+      var ca = (ci * PI) / 3;
       var cx1 = chandX + cos(ca) * w * 0.075;
       var cy1 = chandY + h * 0.02 + sin(ca) * h * 0.015;
-      pg.line(chandX + cos(ca) * w * 0.04, chandY + h * 0.02 + sin(ca) * h * 0.008, cx1, cy1);
+      pg.line(
+        chandX + cos(ca) * w * 0.04,
+        chandY + h * 0.02 + sin(ca) * h * 0.008,
+        cx1,
+        cy1,
+      );
       // Candle
       pg.noStroke();
       pg.fill(230, 220, 180);
@@ -217,9 +222,23 @@ paintings.push({
     pg.fill(230, 225, 215);
     pg.beginShape();
     pg.vertex(womanX - w * 0.04, h * 0.14);
-    pg.bezierVertex(womanX - w * 0.06, h * 0.16, womanX - w * 0.06, h * 0.2, womanX - w * 0.05, h * 0.25);
+    pg.bezierVertex(
+      womanX - w * 0.06,
+      h * 0.16,
+      womanX - w * 0.06,
+      h * 0.2,
+      womanX - w * 0.05,
+      h * 0.25,
+    );
     pg.vertex(womanX + w * 0.05, h * 0.25);
-    pg.bezierVertex(womanX + w * 0.06, h * 0.2, womanX + w * 0.06, h * 0.16, womanX + w * 0.04, h * 0.14);
+    pg.bezierVertex(
+      womanX + w * 0.06,
+      h * 0.2,
+      womanX + w * 0.06,
+      h * 0.16,
+      womanX + w * 0.04,
+      h * 0.14,
+    );
     pg.endShape(CLOSE);
 
     // Face
@@ -244,9 +263,23 @@ paintings.push({
     pg.fill(60, 110, 55);
     pg.beginShape();
     pg.vertex(womanX - w * 0.02, h * 0.35);
-    pg.bezierVertex(womanX + w * 0.04, h * 0.45, womanX + w * 0.05, h * 0.55, womanX + w * 0.03, h * 0.65);
+    pg.bezierVertex(
+      womanX + w * 0.04,
+      h * 0.45,
+      womanX + w * 0.05,
+      h * 0.55,
+      womanX + w * 0.03,
+      h * 0.65,
+    );
     pg.vertex(womanX - w * 0.01, h * 0.65);
-    pg.bezierVertex(womanX + w * 0.01, h * 0.55, womanX + w * 0.02, h * 0.45, womanX - w * 0.02, h * 0.35);
+    pg.bezierVertex(
+      womanX + w * 0.01,
+      h * 0.55,
+      womanX + w * 0.02,
+      h * 0.45,
+      womanX - w * 0.02,
+      h * 0.35,
+    );
     pg.endShape(CLOSE);
 
     // White cuffs
@@ -289,7 +322,16 @@ paintings.push({
     pg.stroke(150, 110, 60);
     pg.strokeWeight(w * 0.004);
     pg.noFill();
-    pg.bezier(dogX + w * 0.035, dogY, dogX + w * 0.04, dogY - h * 0.02, dogX + w * 0.045, dogY - h * 0.025, dogX + w * 0.04, dogY - h * 0.03);
+    pg.bezier(
+      dogX + w * 0.035,
+      dogY,
+      dogX + w * 0.04,
+      dogY - h * 0.02,
+      dogX + w * 0.045,
+      dogY - h * 0.025,
+      dogX + w * 0.04,
+      dogY - h * 0.03,
+    );
     // Dog eyes
     pg.noStroke();
     pg.fill(30, 25, 18);
@@ -319,11 +361,12 @@ paintings.push({
     // Mirror frame medallions
     pg.fill(90, 65, 40);
     for (var mi = 0; mi < 10; mi++) {
-      var ma = mi * TWO_PI / 10;
+      var ma = (mi * TWO_PI) / 10;
       pg.ellipse(
         mirX + cos(ma) * w * 0.035,
         mirY + sin(ma) * w * 0.035,
-        w * 0.008, w * 0.008
+        w * 0.008,
+        w * 0.008,
       );
     }
 
