@@ -1,11 +1,15 @@
 let currentIndex = 0;
 let paintingGraphics = null;
 let needsRedraw = true;
+let touchStartX = 0;
+let touchStartY = 0;
+let isMobile = false;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   textFont("Georgia");
   pixelDensity(1);
+  isMobile = "ontouchstart" in window || navigator.maxTouchPoints > 0;
   noLoop();
   if (paintings.length > 0) {
     renderCurrentPainting();
@@ -60,14 +64,16 @@ function draw() {
     // Navigation hint
     fill(255, 255, 255, 100);
     textSize(min(13, width / 60));
-    text(
-      "\u2190 \u2192 Navigate  |  S Save  |  " +
+    let hint = isMobile
+      ? "Swipe or Tap \u2190 \u2192  |  " +
         (currentIndex + 1) +
         " / " +
-        paintings.length,
-      width / 2,
-      py + ph + 42,
-    );
+        paintings.length
+      : "\u2190 \u2192 Navigate  |  S Save  |  " +
+        (currentIndex + 1) +
+        " / " +
+        paintings.length;
+    text(hint, width / 2, py + ph + 42);
   }
 }
 
@@ -97,13 +103,9 @@ function renderCurrentPainting() {
 
 function keyPressed() {
   if (keyCode === RIGHT_ARROW) {
-    currentIndex = (currentIndex + 1) % paintings.length;
-    needsRedraw = true;
-    redraw();
+    navigateNext();
   } else if (keyCode === LEFT_ARROW) {
-    currentIndex = (currentIndex - 1 + paintings.length) % paintings.length;
-    needsRedraw = true;
-    redraw();
+    navigatePrev();
   } else if (key === "s" || key === "S") {
     if (paintingGraphics) {
       saveCanvas(paintingGraphics, paintings[currentIndex].filename, "png");
@@ -115,4 +117,46 @@ function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
   needsRedraw = true;
   redraw();
+}
+
+function navigateNext() {
+  currentIndex = (currentIndex + 1) % paintings.length;
+  needsRedraw = true;
+  redraw();
+}
+
+function navigatePrev() {
+  currentIndex = (currentIndex - 1 + paintings.length) % paintings.length;
+  needsRedraw = true;
+  redraw();
+}
+
+function touchStarted() {
+  touchStartX = mouseX;
+  touchStartY = mouseY;
+  return true;
+}
+
+function touchEnded() {
+  let dx = mouseX - touchStartX;
+  let dy = mouseY - touchStartY;
+  let absDx = abs(dx);
+  let absDy = abs(dy);
+
+  if (absDx > 40 && absDx > absDy) {
+    // Horizontal swipe
+    if (dx < 0) {
+      navigateNext();
+    } else {
+      navigatePrev();
+    }
+  } else if (absDx < 10 && absDy < 10) {
+    // Tap — left half goes back, right half goes forward
+    if (mouseX < width / 2) {
+      navigatePrev();
+    } else {
+      navigateNext();
+    }
+  }
+  return true;
 }

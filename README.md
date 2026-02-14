@@ -6,10 +6,12 @@ An interactive gallery of 18 famous paintings recreated entirely in code using [
 
 ## Controls
 
-| Key       | Action                       |
-| --------- | ---------------------------- |
-| `→` / `←` | Navigate between paintings   |
-| `S`       | Save current painting as PNG |
+| Input                   | Action                          |
+| ----------------------- | ------------------------------- |
+| `→` / `←`               | Navigate between paintings      |
+| `S`                     | Save current painting as PNG    |
+| **Swipe left/right**    | Navigate (touch devices)        |
+| **Tap left/right half** | Previous / Next (touch devices) |
 
 ## The Paintings
 
